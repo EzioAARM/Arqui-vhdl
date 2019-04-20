@@ -48,7 +48,7 @@ Port (
 end Calculadora;
 
 architecture Behavioral of Calculadora is
-
+-- modificacion
 shared variable var1: std_logic_vector(4 downto 0);
 shared variable var2: std_logic_vector(4 downto 0);
 shared variable var3: std_logic_vector(4 downto 0);
