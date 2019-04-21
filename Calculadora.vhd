@@ -56,12 +56,11 @@ shared variable var4: std_logic_vector(4 downto 0);
 shared variable var5: std_logic_vector(4 downto 0);
 
 begin
-
 display1 <= '1';
 display2 <= '1';
 display3 <= '1';
 display4 <= '1';
-
+show_display <= "11111";
 --GUARDAR: process(teclaso_guardar)
 --begin
 --    display1 <= '1';
@@ -70,8 +69,8 @@ display4 <= '1';
 
 process (teclaso_guardar)
     begin
-        display1 <= '1';
-        show_display <= "11111";
+        display1 <= '0';
+        
 --        if teclaso_guardar='1' then
 --            display1 <= '0';
 --            case posicion is
@@ -100,11 +99,11 @@ process (teclaso_guardar)
 --        end if;
     end process;
     
-process (teclaso_mostrar)
-    begin
-        display1 <= '0';
+--process (teclaso_mostrar)
+--    begin
+--        display1 <= '0';
         
-        show_display <= "11111";
+--        show_display <= "11111";
 --        case posicion is
 --            when "000" => show_display <= var1;
 --            when "001" => show_display <= var2;
@@ -115,6 +114,6 @@ process (teclaso_mostrar)
 --            when "110" => show_display <= var5;
 --            when "111" => show_display <= var5;
 --        end case;
-    end process;
+--    end process;
 
 end Behavioral;
