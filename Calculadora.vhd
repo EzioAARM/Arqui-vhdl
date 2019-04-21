@@ -57,10 +57,10 @@ shared variable var5: std_logic_vector(4 downto 0);
 
 begin
 
-display1 <= '0';
-display2 <= '0';
-display3 <= '0';
-display4 <= '0';
+display1 <= '1';
+display2 <= '1';
+display3 <= '1';
+display4 <= '1';
 
 --GUARDAR: process(teclaso_guardar)
 --begin
@@ -70,7 +70,7 @@ display4 <= '0';
 
 process (teclaso_guardar)
     begin
-        display1 <= '0';
+        display1 <= '1';
         show_display <= "11111";
 --        if teclaso_guardar='1' then
 --            display1 <= '0';
@@ -102,7 +102,7 @@ process (teclaso_guardar)
     
 process (teclaso_mostrar)
     begin
-        display1 <= '1';
+        display1 <= '0';
         
         show_display <= "11111";
 --        case posicion is
