@@ -62,10 +62,11 @@ display2 <= '0';
 display3 <= '0';
 display4 <= '0';
 
-process (teclaso_guardar, teclaso_mostrar)
+process (teclaso_guardar)
     begin
-        if teclaso_guardar='1' then
-            display1 <= '0';
+        display1 <= '0';
+--        if teclaso_guardar='1' then
+--            display1 <= '0';
 --            case posicion is
 --                when "000" => var1 := dato1_input;
 --                when "001" => var2 := dato1_input;
@@ -76,9 +77,9 @@ process (teclaso_guardar, teclaso_mostrar)
 --                when "110" => var5 := dato1_input;
 --                when "111" => var5 := dato1_input;
 --            end case;        
-        end if;
-        if teclaso_mostrar='1' then
-            display1 <= '1';
+--        end if;
+--        if teclaso_mostrar='1' then
+--            display1 <= '1';
 --            case posicion is
 --                when "000" => show_display <= var1;
 --                when "001" => show_display <= var2;
@@ -89,22 +90,22 @@ process (teclaso_guardar, teclaso_mostrar)
 --                when "110" => show_display <= var5;
 --                when "111" => show_display <= var5;
 --            end case;
-        end if;
+--        end if;
     end process;
     
 process (teclaso_mostrar)
     begin
         display1 <= '1';
-        case posicion is
-            when "000" => show_display <= var1;
-            when "001" => show_display <= var2;
-            when "010" => show_display <= var3;
-            when "011" => show_display <= var4;
-            when "100" => show_display <= var5;
-            when "101" => show_display <= var5;
-            when "110" => show_display <= var5;
-            when "111" => show_display <= var5;
-        end case;
+--        case posicion is
+--            when "000" => show_display <= var1;
+--            when "001" => show_display <= var2;
+--            when "010" => show_display <= var3;
+--            when "011" => show_display <= var4;
+--            when "100" => show_display <= var5;
+--            when "101" => show_display <= var5;
+--            when "110" => show_display <= var5;
+--            when "111" => show_display <= var5;
+--        end case;
     end process;
 
 end Behavioral;
