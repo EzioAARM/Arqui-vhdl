@@ -65,7 +65,7 @@ display4 <= '0';
 process (teclaso_guardar, teclaso_mostrar)
     begin
         if teclaso_guardar='1' then
-            display1 <= '1';
+            display1 <= '0';
 --            case posicion is
 --                when "000" => var1 := dato1_input;
 --                when "001" => var2 := dato1_input;
