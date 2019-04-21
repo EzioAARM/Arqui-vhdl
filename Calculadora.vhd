@@ -61,15 +61,15 @@ display2 <= '1';
 display3 <= '1';
 display4 <= '1';
 show_display <= "11111";
---GUARDAR: process(teclaso_guardar)
---begin
---    display1 <= '1';
-    
---end process;
+GUARDAR: process(teclaso_guardar)
+begin
+    display1 <= '0';
+    show_display <= "11101";
+end process;
 
-process (teclaso_guardar)
-    begin
-        display1 <= '0';
+--process (teclaso_guardar)
+--    begin
+--        display1 <= '0';
         
 --        if teclaso_guardar='1' then
 --            display1 <= '0';
@@ -97,7 +97,7 @@ process (teclaso_guardar)
 --                when "111" => show_display <= var5;
 --            end case;
 --        end if;
-    end process;
+--    end process;
     
 --process (teclaso_mostrar)
 --    begin
