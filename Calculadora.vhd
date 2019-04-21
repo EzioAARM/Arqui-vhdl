@@ -62,9 +62,16 @@ display2 <= '0';
 display3 <= '0';
 display4 <= '0';
 
+--GUARDAR: process(teclaso_guardar)
+--begin
+--    display1 <= '1';
+    
+--end process;
+
 process (teclaso_guardar)
     begin
         display1 <= '0';
+        show_display <= "11111";
 --        if teclaso_guardar='1' then
 --            display1 <= '0';
 --            case posicion is
@@ -96,6 +103,8 @@ process (teclaso_guardar)
 process (teclaso_mostrar)
     begin
         display1 <= '1';
+        
+        show_display <= "11111";
 --        case posicion is
 --            when "000" => show_display <= var1;
 --            when "001" => show_display <= var2;
