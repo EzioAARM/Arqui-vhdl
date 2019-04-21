@@ -54,17 +54,24 @@ shared variable var2: std_logic_vector(4 downto 0);
 shared variable var3: std_logic_vector(4 downto 0);
 shared variable var4: std_logic_vector(4 downto 0);
 shared variable var5: std_logic_vector(4 downto 0);
+shared variable counter: std_logic := '0';
 
 begin
-display1 <= '1';
+display1 <= '0';
 display2 <= '1';
 display3 <= '1';
 display4 <= '1';
 show_display <= "11111";
 GUARDAR: process(teclaso_guardar)
 begin
-    display1 <= '0';
-    show_display <= "00000";
+    if counter = '0' then
+            show_display <= "00000";
+            counter := '1';
+        else
+            show_display <= "11111";
+            counter := '0';
+    end if;
+    
 end process;
 
 --process (teclaso_guardar)
