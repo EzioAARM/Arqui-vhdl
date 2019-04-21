@@ -62,17 +62,17 @@ display2 <= '1';
 display3 <= '1';
 display4 <= '1';
 show_display <= "11111";
-GUARDAR: process(teclaso_guardar)
-begin
-    if counter = '0' then
-            show_display <= "00000";
-            counter := '1';
-        else
-            show_display <= "11111";
-            counter := '0';
-    end if;
-    
-end process;
+process(teclaso_guardar)
+    begin
+        if counter = '0' then
+                show_display <= "00000";
+                counter := '1';
+            else
+                show_display <= "11111";
+                counter := '0';
+        end if;
+        
+    end process;
 
 --process (teclaso_guardar)
 --    begin
