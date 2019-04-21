@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Sat Apr 20 15:42:57 2019
-| Host                      : axel-VirtualBox running 64-bit unknown
+| Date                      : Sun Apr 21 10:42:37 2019
+| Host                      : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command                   : report_io -file Calculadora_io_placed.rpt
 | Design                    : Calculadora
 | Device                    : xc7a35t
