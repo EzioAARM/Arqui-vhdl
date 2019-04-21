@@ -56,7 +56,7 @@ display2 <= '1';
 display3 <= '1';
 display4 <= '1';
 --show_display <= "11111";
-process(teclaso_mostrar)
+process(teclaso_mostrar) is
     begin
         show_display <= dato1_input;
 --        if counter = '0' then
