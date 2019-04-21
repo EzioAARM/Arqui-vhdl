@@ -64,7 +64,7 @@ show_display <= "11111";
 GUARDAR: process(teclaso_guardar)
 begin
     display1 <= '0';
-    show_display <= "11101";
+    show_display <= "00000";
 end process;
 
 --process (teclaso_guardar)
