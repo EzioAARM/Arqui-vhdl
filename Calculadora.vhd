@@ -54,7 +54,7 @@ shared variable var2: std_logic_vector(4 downto 0);
 shared variable var3: std_logic_vector(4 downto 0);
 shared variable var4: std_logic_vector(4 downto 0);
 shared variable var5: std_logic_vector(4 downto 0);
-shared variable counter: std_logic := '0';
+shared variable counter: std_logic := '1';
 
 begin
 display1 <= '0';
