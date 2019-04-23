@@ -33,10 +33,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Calculadora is
 Port (
-    dato1_input: in std_logic_vector(4 downto 0);
+    dato1_input: in std_logic_vector(2 downto 0);
     posicion: in std_logic_vector(2 downto 0);
+    teclaso_mostrar: in std_logic;
+    teclaso_guardar: in std_logic;
     
-    show_display: out std_logic_vector(4 downto 0);
+    show_display: out std_logic_vector(7 downto 0);
     
     display1: out std_logic;
     display2: out std_logic;
@@ -46,74 +48,24 @@ Port (
 end Calculadora;
 
 architecture Behavioral of Calculadora is
--- modificacion
-signal  teclaso_guardar : std_logic;
-signal  teclaso_mostrar : std_logic;
-shared variable counter: std_logic := '1';
 begin
 display1 <= '0';
 display2 <= '1';
 display3 <= '1';
 display4 <= '1';
---show_display <= "11111";
-process(teclaso_mostrar) is
-    begin
-        if (counter = '0') then
-                display1 <= '1';
-                counter := '0';
-            else
-                display1 <= '0';
-                counter := '1';
-        end if;
-    end process;
 
---process (teclaso_guardar)
---    begin
---        display1 <= '0';
-        
---        if teclaso_guardar='1' then
---            display1 <= '0';
---            case posicion is
---                when "000" => var1 := dato1_input;
---                when "001" => var2 := dato1_input;
---                when "010" => var3 := dato1_input;
---                when "011" => var4 := dato1_input;
---                when "100" => var5 := dato1_input;
---                when "101" => var5 := dato1_input;
---                when "110" => var5 := dato1_input;
---                when "111" => var5 := dato1_input;
---            end case;        
---        end if;
---        if teclaso_mostrar='1' then
---            display1 <= '1';
---            case posicion is
---                when "000" => show_display <= var1;
---                when "001" => show_display <= var2;
---                when "010" => show_display <= var3;
---                when "011" => show_display <= var4;
---                when "100" => show_display <= var5;
---                when "101" => show_display <= var5;
---                when "110" => show_display <= var5;
---                when "111" => show_display <= var5;
---            end case;
---        end if;
---    end process;
-    
---process (teclaso_mostrar)
---    begin
---        display1 <= '0';
-        
---        show_display <= "11111";
---        case posicion is
---            when "000" => show_display <= var1;
---            when "001" => show_display <= var2;
---            when "010" => show_display <= var3;
---            when "011" => show_display <= var4;
---            when "100" => show_display <= var5;
---            when "101" => show_display <= var5;
---            when "110" => show_display <= var5;
---            when "111" => show_display <= var5;
---        end case;
---    end process;
+process (teclaso_guardar, teclaso_mostrar, dato1_input)
+    begin
+        case (dato1_input) is
+            when "000" => show_display <= "00000001";
+            when "001" => show_display <= "01111001";
+            when "010" => show_display <= "01111001";
+            when "011" => show_display <= "00000001";
+            when "100" => show_display <= "11111001";
+            when "101" => show_display <= "11111001";
+            when "110" => show_display <= "11111001";
+            when "111" => show_display <= "11111001";
+        end case;
+end process;
 
 end Behavioral;
