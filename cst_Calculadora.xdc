@@ -1,3 +1,7 @@
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets teclaso_guardar_IBUF]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {teclaso_guardar}]
+set_property IOSTANDARD LVCMOS33 [get_ports {teclaso_mostrar}]
 set_property IOSTANDARD LVCMOS33 [get_ports {dato1_input[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {dato1_input[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {dato1_input[0]}]
@@ -19,6 +23,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports display4]
 
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {posicion_IBUF[2]}]
 
+set_property PACKAGE_PIN U17 [get_ports {teclaso_mostrar}]
+set_property PACKAGE_PIN T18 [get_ports {teclaso_guardar}]
 set_property PACKAGE_PIN V15 [get_ports {posicion[2]}]
 set_property PACKAGE_PIN W14 [get_ports {posicion[1]}]
 set_property PACKAGE_PIN W13 [get_ports {posicion[0]}]
@@ -40,6 +46,7 @@ set_property PACKAGE_PIN V16 [get_ports {dato1_input[1]}]
 set_property PACKAGE_PIN W16 [get_ports {dato1_input[0]}]
 
 
+set_property SLEW SLOW [get_ports {show_display[7]}]
 set_property SLEW SLOW [get_ports {show_display[6]}]
 set_property SLEW SLOW [get_ports {show_display[5]}]
 set_property SLEW SLOW [get_ports {show_display[4]}]
@@ -47,6 +54,7 @@ set_property SLEW SLOW [get_ports {show_display[3]}]
 set_property SLEW SLOW [get_ports {show_display[2]}]
 set_property SLEW SLOW [get_ports {show_display[1]}]
 set_property SLEW SLOW [get_ports {show_display[0]}]
+set_property DRIVE 12 [get_ports {show_display[7]}]
 set_property DRIVE 12 [get_ports {show_display[6]}]
 set_property DRIVE 12 [get_ports {show_display[5]}]
 set_property DRIVE 12 [get_ports {show_display[4]}]

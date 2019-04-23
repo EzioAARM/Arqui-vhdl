@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Apr 23 08:56:27 2019
+| Date         : Tue Apr 23 09:17:44 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_methodology -file Calculadora_methodology_drc_routed.rpt -pb Calculadora_methodology_drc_routed.pb -rpx Calculadora_methodology_drc_routed.rpx
 | Design       : Calculadora
@@ -23,12 +23,48 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 7
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| TIMING-20 | Warning  | Non-clocked latch | 7          |
++-----------+----------+-------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch show_display_reg[1] cannot be properly analyzed as its control pin show_display_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch show_display_reg[2] cannot be properly analyzed as its control pin show_display_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch show_display_reg[3] cannot be properly analyzed as its control pin show_display_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch show_display_reg[4] cannot be properly analyzed as its control pin show_display_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch show_display_reg[5] cannot be properly analyzed as its control pin show_display_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch show_display_reg[6] cannot be properly analyzed as its control pin show_display_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch show_display_reg[7] cannot be properly analyzed as its control pin show_display_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
 

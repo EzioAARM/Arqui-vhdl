@@ -56,16 +56,18 @@ display4 <= '1';
 
 process (teclaso_guardar, teclaso_mostrar)
     begin
-        case (dato1_input) is
-            when "000" => show_display <= "00000001";
-            when "001" => show_display <= "00000011";
-            when "010" => show_display <= "00000111";
-            when "011" => show_display <= "00001111";
-            when "100" => show_display <= "00011111";
-            when "101" => show_display <= "00111111";
-            when "110" => show_display <= "01111111";
-            when "111" => show_display <= "11111111";
-        end case;
+        if teclaso_guardar = '1' then
+            case (dato1_input) is
+                when "000" => show_display <= "00000001";
+                when "001" => show_display <= "00000011";
+                when "010" => show_display <= "00000111";
+                when "011" => show_display <= "00001111";
+                when "100" => show_display <= "00011111";
+                when "101" => show_display <= "00111111";
+                when "110" => show_display <= "01111111";
+                when "111" => show_display <= "11111111";
+            end case;
+        end if;
 end process;
 
 end Behavioral;
