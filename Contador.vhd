@@ -50,7 +50,7 @@ signal rfsh: STD_LOGIC_VECTOR (10 downto 0);
 signal act: std_logic_vector(1 downto 0);
 begin
 
-process(SDDisplay)
+process(SDDisplay, contador)
 begin
     case SDDisplay is
     when "0000" => led <= "0000001"; -- 0     
@@ -63,12 +63,7 @@ begin
     when "0111" => led <= "0001111"; -- 7 
     when "1000" => led <= "0000000"; -- 8     
     when "1001" => led <= "0000100"; -- 9 
-    when "1010" => led <= "1001111";
-    when "1011" => led <= "0010010";
-    when "1100" => led <= "0000110";
-    when "1101" => led <= "1001100";
-    when "1110" => led <= "0100100";
-    when "1111" => led <= "0100000";
+    when others => led <= "1001111";
     end case;
 end process;
 process(timer,reset)
@@ -107,7 +102,11 @@ begin
             if(contador>=x"5F5E0FF") then
                 contador <= (others => '0');
             else
-                contador <= contador + "0000001";
+              
+                case (SDDisplay) is
+                    when "1010" => contador <= contador + "0000110";
+                    when others => contador <= contador + "0000001";
+                end case;
             end if;
         end if;
 end process;

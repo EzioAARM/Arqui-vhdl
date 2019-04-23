@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Apr 23 11:12:33 2019
-| Host             : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
+| Date             : Tue Apr 23 11:28:24 2019
+| Host             : axel-VirtualBox running 64-bit unknown
 | Command          : report_power -file Contador_power_routed.rpt -pb Contador_power_summary_routed.pb -rpx Contador_power_routed.rpx
 | Design           : Contador
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.559        |
+| Total On-Chip Power (W)  | 0.556        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.487        |
+| Dynamic (W)              | 0.483        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 82.2         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.258 |      137 |       --- |             --- |
-|   LUT as Logic |     0.208 |       58 |     20800 |            0.28 |
-|   CARRY4       |     0.027 |       11 |      8150 |            0.13 |
-|   Register     |     0.017 |       55 |     41600 |            0.13 |
+| Slice Logic    |     0.255 |      139 |       --- |             --- |
+|   LUT as Logic |     0.201 |       59 |     20800 |            0.28 |
+|   CARRY4       |     0.029 |       11 |      8150 |            0.13 |
+|   Register     |     0.018 |       55 |     41600 |            0.13 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.129 |       96 |       --- |             --- |
-| I/O            |     0.099 |       13 |       106 |           12.26 |
+| Signals        |     0.139 |       98 |       --- |             --- |
+| I/O            |     0.089 |       13 |       106 |           12.26 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.559 |          |           |                 |
+| Total          |     0.556 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.402 |       0.391 |      0.010 |
+| Vccint    |       1.000 |     0.408 |       0.398 |      0.010 |
 | Vccaux    |       1.800 |     0.016 |       0.003 |      0.013 |
-| Vcco33    |       3.300 |     0.028 |       0.027 |      0.001 |
+| Vcco33    |       3.300 |     0.025 |       0.024 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,7 +138,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| Contador |     0.487 |
+| Contador |     0.483 |
 +----------+-----------+
 
 
