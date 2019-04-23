@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Apr 23 09:17:45 2019
+| Date             : Tue Apr 23 09:42:01 2019
 | Host             : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file Calculadora_power_routed.rpt -pb Calculadora_power_summary_routed.pb -rpx Calculadora_power_routed.rpx
 | Design           : Calculadora
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.545        |
+| Total On-Chip Power (W)  | 5.347        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.466        |
-| Device Static (W)        | 0.078        |
+| Dynamic (W)              | 5.255        |
+| Device Static (W)        | 0.092        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 72.3         |
-| Junction Temperature (C) | 37.7         |
+| Max Ambient (C)          | 58.3         |
+| Junction Temperature (C) | 51.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.020 |       18 |       --- |             --- |
-|   LUT as Logic |     0.015 |        3 |     20800 |            0.01 |
+| Slice Logic    |     0.071 |       32 |       --- |             --- |
+|   LUT as Logic |     0.059 |       14 |     20800 |            0.07 |
+|   Register     |     0.006 |       12 |     41600 |            0.03 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-|   Register     |     0.000 |        7 |     41600 |            0.02 |
-| Signals        |     0.056 |       17 |       --- |             --- |
-| I/O            |     2.390 |       16 |       106 |           15.09 |
-| Static Power   |     0.078 |          |           |                 |
-| Total          |     2.545 |          |           |                 |
+|   Others       |     0.000 |        2 |       --- |             --- |
+| Signals        |     0.159 |       37 |       --- |             --- |
+| I/O            |     5.025 |       11 |       106 |           10.38 |
+| Static Power   |     0.092 |          |           |                 |
+| Total          |     5.347 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,9 +70,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.108 |       0.092 |      0.015 |
-| Vccaux    |       1.800 |     0.100 |       0.087 |      0.013 |
-| Vcco33    |       3.300 |     0.673 |       0.672 |      0.001 |
+| Vccint    |       1.000 |     0.284 |       0.258 |      0.026 |
+| Vccaux    |       1.800 |     0.197 |       0.183 |      0.014 |
+| Vcco33    |       3.300 |     1.415 |       1.414 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -137,7 +137,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| Calculadora |     2.466 |
+| Calculadora |     5.255 |
 +-------------+-----------+
 
 
