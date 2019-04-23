@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556050126">
+  <File Type="VDS-TIMING-PB" Name="Contador_hexbin_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Contador_hexbin_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Contador_hexbin.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Contador_hexbin_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Contador_hexbin_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Contador_hexbin_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Contador_hexbin.vds"/>
+  <File Type="REPORTS-TCL" Name="Contador_hexbin_reports.tcl"/>
+  <File Type="PA-TCL" Name="Contador_hexbin.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/Contador hexbin.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Contador_hexbin"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/cst_Contador hexbin.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/cst_Contador hexbin.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
