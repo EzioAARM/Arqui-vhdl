@@ -1,0 +1,12 @@
+
+{ 
+    crc :  4860591877527735762  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto ed44e9923abb4b79aa70d00d05dd44b8 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Contador_hexbin_behav xil_defaultlib.Contador_hexbin" , 
+    buildDate : "Dec  6 2018" , 
+    buildTime : "23:39:36" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/Contador_hexbin_behav/xsimk\"   \"xsim.dir/Contador_hexbin_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/Contador_hexbin_behav/obj/xsim_1.lnx64.o\" -L\"/extraFiles/Vivado/Vivado/2018.3/lib/lnx64.o\" -lrdi_simulator_kernel  -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

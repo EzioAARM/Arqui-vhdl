@@ -1,0 +1,16 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /extraFiles/Vivado/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto ed44e9923abb4b79aa70d00d05dd44b8 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Contador_hexbin_behav xil_defaultlib.Contador_hexbin -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.contador_hexbin
+Built simulation snapshot Contador_hexbin_behav

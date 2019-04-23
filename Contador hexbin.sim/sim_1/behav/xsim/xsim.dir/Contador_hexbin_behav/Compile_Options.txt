@@ -1,0 +1,1 @@
+-wto "ed44e9923abb4b79aa70d00d05dd44b8" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Contador_hexbin_behav" "xil_defaultlib.Contador_hexbin" -log "elaborate.log" 

@@ -48,31 +48,39 @@ end Contador_hexbin;
 
 architecture Behavioral of Contador_hexbin is
 
+    constant clockFreq : integer := 100e6;
+    constant clockPer : time := 100 ms / clockFreq;
     signal timer : std_logic := '0'; -- señal de reloj
     signal numeroD1 : std_logic_vector(3 downto 0) := "0000";
     signal numeroD2 : std_logic_vector(3 downto 0) := "0000";
     signal numeroD3 : std_logic_vector(3 downto 0) := "0000";
     signal numeroD4 : std_logic_vector(3 downto 0) := "0000";
     signal activo : std_logic;
-    signal contando : std_logic := '0';
+    signal contando : std_logic := '1';
     signal accionActual : std_logic := '0';
-    signal displayActual : std_logic_vector(1 downto 0) := (others => '0');
-    signal numeroDisplay : STD_LOGIC_VECTOR (3 downto 0);
+    signal displayActual : std_logic_vector(1 downto 0);
+    signal numeroDisplay : std_logic_vector (3 downto 0);
 
 begin
-timer <= not timer after 10 ms; -- la señal cambia cada 100 ms
 
-process(displayActual)
+timer <= not timer after clockPer/2; -- la señal cambia cada 100 ms
+
+process(displayActual, numeroDisplay)
     begin
         case displayActual is
             when "00" =>
                 Display <= "0111";
+                numeroDisplay <= numeroD4;
             when "01" =>
                 Display <= "1011";
+                numeroDisplay <= numeroD3;
             when "10" =>
                 Display <= "1101";
+                numeroDisplay <= numeroD2;
             when "11" =>
                 Display <= "1110";
+                numeroDisplay <= numeroD1;
+            when others => Display <= "1110";
         end case;
         case numeroDisplay is
             when "0000" => led <= "0000001"; -- 0     
@@ -91,10 +99,11 @@ process(displayActual)
             when "1101" => led <= "1000010"; -- D
             when "1110" => led <= "0110000"; -- E
             when "1111" => led <= "0111000"; -- F
+            when others => led <= "0000001";
         end case;
     end process;
 
-process (timer)
+process (timer) is
     begin
         if (rising_edge(timer)) then
             if (esHex = '1') then
@@ -119,16 +128,39 @@ process (timer)
                             end if;
                         end if;
                     end if;
+                else
+                    numeroD1 <= numeroD1 + "0001";
                 end if;
             else
                 if (numeroD1 = "1001") then
                     numeroD1 <= "0000";
+                    numeroD2 <= numeroD2 + "0001";
+                    if (numeroD2 = "1001") then
+                        numeroD2 <= "0000";
+                        numeroD3 <= numeroD2 + "0001";
+                        if (numeroD3 = "1001") then
+                            numeroD3 <= "0000";
+                            numeroD4 <= numeroD4 + "0001";
+                            if (numeroD4 = "1001" and numeroD3 = "1001" and numeroD2 = "1001" and numeroD1 = "1001") then
+                                --Cuando se termine la cuenta se detiene
+                                contando <= '0';
+                                numeroD1 <= "0000";
+                                numeroD2 <= "0000";
+                                numeroD3 <= "0000";
+                                numeroD4 <= "0000";
+                                accionActual <= '0';
+                                indicador <= "10";
+                            end if;
+                        end if;
+                    end if;
+                else
+                    numeroD1 <= numeroD1 + "0001";
                 end if;
             end if;
         end if;
     end process;
 
-process (manager)
+process (manager) is
     begin
         if (accionActual = '0') then
             -- Cuenta
@@ -141,7 +173,7 @@ process (manager)
         end if;
     end process;
 
-process (reset)
+process (reset) is
     begin
         if (contando = '1') then
             contando <= '0';
@@ -153,7 +185,7 @@ process (reset)
         indicador <= "00";
     end process;
     
-process (esHex)
+process (esHex) is
     begin
         if (esHex = '1') then
             esHexIndicator <= '1';
