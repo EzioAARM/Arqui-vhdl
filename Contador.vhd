@@ -42,7 +42,7 @@ entity Contador is
 end Contador;
 
 architecture Behavioral of Contador is
-signal contador: STD_LOGIC_VECTOR (10 downto 0);
+signal contador: STD_LOGIC_VECTOR (27 downto 0);
 signal activo: std_logic;
 signal numero: STD_LOGIC_VECTOR (15 downto 0);
 signal SDDisplay: STD_LOGIC_VECTOR (3 downto 0);

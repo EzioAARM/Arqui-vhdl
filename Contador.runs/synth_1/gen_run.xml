@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556037603">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556038391">
   <File Type="VDS-TIMING-PB" Name="Contador_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="Contador_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Contador.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Contador_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Contador_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Contador_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Contador.vds"/>
   <File Type="REPORTS-TCL" Name="Contador_reports.tcl"/>
   <File Type="PA-TCL" Name="Contador.tcl"/>
-  <File Type="RDS-RDS" Name="Contador.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="Contador_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="Contador_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Contador_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/Contador.vhd">
