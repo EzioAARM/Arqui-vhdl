@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Apr 23 10:55:40 2019
+| Date             : Tue Apr 23 11:12:33 2019
 | Host             : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file Contador_power_routed.rpt -pb Contador_power_summary_routed.pb -rpx Contador_power_routed.rpx
 | Design           : Contador
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 8.454        |
+| Total On-Chip Power (W)  | 0.559        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 8.335        |
-| Device Static (W)        | 0.119        |
+| Dynamic (W)              | 0.487        |
+| Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 42.7         |
-| Junction Temperature (C) | 67.3         |
+| Max Ambient (C)          | 82.2         |
+| Junction Temperature (C) | 27.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.249 |      140 |       --- |             --- |
-|   LUT as Logic |     0.181 |       51 |     20800 |            0.25 |
-|   CARRY4       |     0.041 |       16 |      8150 |            0.20 |
-|   Register     |     0.022 |       64 |     41600 |            0.15 |
+| Slice Logic    |     0.258 |      137 |       --- |             --- |
+|   LUT as Logic |     0.208 |       58 |     20800 |            0.28 |
+|   CARRY4       |     0.027 |       11 |      8150 |            0.13 |
+|   Register     |     0.017 |       55 |     41600 |            0.13 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.205 |      108 |       --- |             --- |
-| I/O            |     7.881 |       13 |       106 |           12.26 |
-| Static Power   |     0.119 |          |           |                 |
-| Total          |     8.454 |          |           |                 |
+| Signals        |     0.129 |       96 |       --- |             --- |
+| I/O            |     0.099 |       13 |       106 |           12.26 |
+| Static Power   |     0.073 |          |           |                 |
+| Total          |     0.559 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.507 |       0.458 |      0.049 |
-| Vccaux    |       1.800 |     0.305 |       0.289 |      0.017 |
-| Vcco33    |       3.300 |     2.231 |       2.230 |      0.001 |
+| Vccint    |       1.000 |     0.402 |       0.391 |      0.010 |
+| Vccaux    |       1.800 |     0.016 |       0.003 |      0.013 |
+| Vcco33    |       3.300 |     0.028 |       0.027 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,7 +138,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| Contador |     8.335 |
+| Contador |     0.487 |
 +----------+-----------+
 
 

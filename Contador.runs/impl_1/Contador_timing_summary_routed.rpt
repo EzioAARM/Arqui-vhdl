@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Apr 23 10:55:40 2019
+| Date         : Tue Apr 23 11:12:33 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -max_paths 10 -file Contador_timing_summary_routed.rpt -pb Contador_timing_summary_routed.pb -rpx Contador_timing_summary_routed.rpx -warn_on_violation
 | Design       : Contador
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 64 register/latch pins with no clock driven by root clock pin: timer (HIGH)
+ There are 55 register/latch pins with no clock driven by root clock pin: timer (HIGH)
 
 
 2. checking constant_clock
@@ -67,7 +67,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 144 pins that are not constrained for maximum delay. (HIGH)
+ There are 126 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
