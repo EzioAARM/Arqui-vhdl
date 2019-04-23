@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Apr 23 11:28:23 2019
-| Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
+| Date         : Tue Apr 23 11:34:29 2019
+| Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_methodology -file Contador_methodology_drc_routed.rpt -pb Contador_methodology_drc_routed.pb -rpx Contador_methodology_drc_routed.rpx
 | Design       : Contador
 | Device       : xc7a35tcpg236-1
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 55
+             Violations found: 50
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 55         |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 50         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -259,52 +259,27 @@ Related violations: <none>
 
 TIMING-17#46 Warning
 Non-clocked sequential cell  
-The clock pin rfsh_reg[10]/C is not reached by a timing clock
+The clock pin rfsh_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Warning
 Non-clocked sequential cell  
-The clock pin rfsh_reg[1]/C is not reached by a timing clock
+The clock pin rfsh_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Warning
 Non-clocked sequential cell  
-The clock pin rfsh_reg[2]/C is not reached by a timing clock
+The clock pin rfsh_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Warning
 Non-clocked sequential cell  
-The clock pin rfsh_reg[3]/C is not reached by a timing clock
+The clock pin rfsh_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Warning
 Non-clocked sequential cell  
-The clock pin rfsh_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#51 Warning
-Non-clocked sequential cell  
 The clock pin rfsh_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#52 Warning
-Non-clocked sequential cell  
-The clock pin rfsh_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#53 Warning
-Non-clocked sequential cell  
-The clock pin rfsh_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#54 Warning
-Non-clocked sequential cell  
-The clock pin rfsh_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#55 Warning
-Non-clocked sequential cell  
-The clock pin rfsh_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 

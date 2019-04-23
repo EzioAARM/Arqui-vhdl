@@ -46,7 +46,7 @@ signal contador: STD_LOGIC_VECTOR (27 downto 0);
 signal activo: std_logic;
 signal numero: STD_LOGIC_VECTOR (15 downto 0);
 signal SDDisplay: STD_LOGIC_VECTOR (3 downto 0);
-signal rfsh: STD_LOGIC_VECTOR (10 downto 0);
+signal rfsh: STD_LOGIC_VECTOR (5 downto 0);
 signal act: std_logic_vector(1 downto 0);
 begin
 
@@ -63,7 +63,7 @@ begin
     when "0111" => led <= "0001111"; -- 7 
     when "1000" => led <= "0000000"; -- 8     
     when "1001" => led <= "0000100"; -- 9 
-    when others => led <= "1001111";
+    when others => led <= "0000100";
     end case;
 end process;
 process(timer,reset)
@@ -74,7 +74,7 @@ begin
         rfsh <= rfsh + 1;
     end if;
 end process;
- act <= rfsh(10 downto 9);
+ act <= rfsh(5 downto 4);
 process(act)
 begin
     case act is
@@ -102,7 +102,6 @@ begin
             if(contador>=x"5F5E0FF") then
                 contador <= (others => '0');
             else
-              
                 case (SDDisplay) is
                     when "1010" => contador <= contador + "0000110";
                     when others => contador <= contador + "0000001";
