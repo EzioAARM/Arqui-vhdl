@@ -46,7 +46,7 @@ signal contador: STD_LOGIC_VECTOR (27 downto 0);
 signal activo: std_logic;
 signal numero: STD_LOGIC_VECTOR (15 downto 0);
 signal SDDisplay: STD_LOGIC_VECTOR (3 downto 0);
-signal rfsh: STD_LOGIC_VECTOR (5 downto 0);
+signal rfsh: STD_LOGIC_VECTOR (10 downto 0);
 signal act: std_logic_vector(1 downto 0);
 begin
 
@@ -74,7 +74,7 @@ begin
         rfsh <= rfsh + 1;
     end if;
 end process;
- act <= rfsh(5 downto 4);
+ act <= rfsh(10 downto 9);
 process(act)
 begin
     case act is
