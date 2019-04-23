@@ -35,8 +35,6 @@ entity Calculadora is
 Port (
     dato1_input: in std_logic_vector(4 downto 0);
     posicion: in std_logic_vector(2 downto 0);
-    teclaso_guardar: in std_logic;
-    teclaso_mostrar: in std_logic;
     
     show_display: out std_logic_vector(4 downto 0);
     
@@ -49,6 +47,8 @@ end Calculadora;
 
 architecture Behavioral of Calculadora is
 -- modificacion
+signal  teclaso_guardar : std_logic;
+signal  teclaso_mostrar : std_logic;
 shared variable counter: std_logic := '1';
 begin
 display1 <= '0';
@@ -58,15 +58,13 @@ display4 <= '1';
 --show_display <= "11111";
 process(teclaso_mostrar) is
     begin
-        show_display <= dato1_input;
---        if counter = '0' then
---                show_display <= "00000";
---                counter := '1';
---            else
---                show_display <= "11111";
---                counter := '0';
---        end if;
-        
+        if (counter = '0') then
+                display1 <= '1';
+                counter := '0';
+            else
+                display1 <= '0';
+                counter := '1';
+        end if;
     end process;
 
 --process (teclaso_guardar)
