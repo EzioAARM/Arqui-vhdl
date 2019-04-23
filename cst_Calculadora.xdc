@@ -35,9 +35,9 @@ set_property PACKAGE_PIN V4 [get_ports display3]
 set_property PACKAGE_PIN W4 [get_ports display4]
 
 set_property DRIVE 12 [get_ports display1]
-set_property PACKAGE_PIN W16 [get_ports {dato1_input[2]}]
-set_property PACKAGE_PIN W17 [get_ports {dato1_input[1]}]
-set_property PACKAGE_PIN W15 [get_ports {dato1_input[0]}]
+set_property PACKAGE_PIN V17 [get_ports {dato1_input[2]}]
+set_property PACKAGE_PIN V16 [get_ports {dato1_input[1]}]
+set_property PACKAGE_PIN W16 [get_ports {dato1_input[0]}]
 
 
 set_property SLEW SLOW [get_ports {show_display[6]}]
