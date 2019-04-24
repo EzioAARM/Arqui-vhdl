@@ -66,45 +66,6 @@ begin
 
 timer <= not timer after clockPer/2; -- la señal cambia cada 100 ms
 
---process(displayActual, numeroDisplay)
---    begin
---        case displayActual is
---            when "00" =>
---                display <= "0111";
---                numeroDisplay <= std_logic_vector(numeroD4);
---            when "01" =>
---                display <= "1011";
---                numeroDisplay <= std_logic_vector(numeroD3);
---            when "10" =>
---                display <= "1101";
---                numeroDisplay <= std_logic_vector(numeroD2);
---            when "11" =>
---                display <= "1110";
---                numeroDisplay <= std_logic_vector(numeroD1);
---            when others => display <= "1110";
---        end case;
---        case numeroDisplay is
---            when "0000" => led <= "0000001"; -- 0     
---            when "0001" => led <= "1001111"; -- 1 
---            when "0010" => led <= "0010010"; -- 2 
---            when "0011" => led <= "0000110"; -- 3 
---            when "0100" => led <= "1001100"; -- 4 
---            when "0101" => led <= "0100100"; -- 5 
---            when "0110" => led <= "0100000"; -- 6 
---            when "0111" => led <= "0001111"; -- 7 
---            when "1000" => led <= "0000000"; -- 8     
---            when "1001" => led <= "0000100"; -- 9 
---            when "1010" => led <= "0001000"; -- A
---            when "1011" => led <= "1100000"; -- B
---            when "1100" => led <= "0110001"; -- C
---            when "1101" => led <= "1000010"; -- D
---            when "1110" => led <= "0110000"; -- E
---            when "1111" => led <= "0111000"; -- F
---            when others => led <= "0000001";
---        end case;
---        Display <= "0000";
---    end process;
-
 process (timer) is
     begin
         if (rising_edge(timer)) then
@@ -149,7 +110,7 @@ process (timer) is
                     if (numeroD2 = 9) then
                         numeroD2 <= 0;
                         displayActual <= "10";
-                        numeroD3 <= numeroD2 + 1;
+                        numeroD3 <= numeroD3 + 1;
                         displayActual <= "01";
                         if (numeroD3 = 9) then
                             numeroD3 <= 0;
@@ -173,60 +134,6 @@ process (timer) is
                     displayActual <= "11";
                 end if;
             end if;
-        end if;
-        display <= "0000";
-        case numeroD1 is
-            when 0 => led <= "0000001"; -- 0     
-            when 1 => led <= "1001111"; -- 1 
-            when 2 => led <= "0010010"; -- 2 
-            when 3 => led <= "0000110"; -- 3 
-            when 4 => led <= "1001100"; -- 4 
-            when 5 => led <= "0100100"; -- 5 
-            when 6 => led <= "0100000"; -- 6 
-            when 7 => led <= "0001111"; -- 7 
-            when 8 => led <= "0000000"; -- 8     
-            when 9 => led <= "0000100"; -- 9 
-            when 10 => led <= "0001000"; -- A
-            when 11 => led <= "1100000"; -- B
-            when 12 => led <= "0110001"; -- C
-            when 13 => led <= "1000010"; -- D
-            when 14 => led <= "0110000"; -- E
-            when 15 => led <= "0111000"; -- F
-            when others => led <= "0000001";
-        end case;
-    end process;
-
-process (manager) is
-    begin
-        if (accionActual = '0') then
-            -- Cuenta
-            accionActual <= '1';
-            indicador <= "01";
-        else
-            -- Deja de contar
-            accionActual <= '0';
-            indicador <= "10";
-        end if;
-    end process;
-
-process (reset) is
-    begin
-        if (contando = '1') then
-            contando <= '0';
-        end if;
-        numeroD1 <= 0;
-        numeroD2 <= 0;
-        numeroD3 <= 0;
-        numeroD4 <= 0;
-        indicador <= "00";
-    end process;
-    
-process (esHex) is
-    begin
-        if (esHex = '1') then
-            esHexIndicator <= '1';
-        else
-            esHexIndicator <= '0';
         end if;
     end process;
 

@@ -6,4 +6,12 @@ Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
-ERROR: [XSIM 43-3249] File /home/axel/Documentos/Contador hexbin/Contador hexbin.vhd, line 55. Unresolved signal "numerod1" is multiply driven.
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.contador_hexbin
+Built simulation snapshot Contador_hexbin_behav
