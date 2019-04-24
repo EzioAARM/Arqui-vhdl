@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Apr 23 17:23:47 2019
-# Process ID: 31437
+# Start of session at: Tue Apr 23 21:01:07 2019
+# Process ID: 17076
 # Current directory: /home/axel/Documentos/Contador hexbin/Contador hexbin.runs/synth_1
 # Command line: vivado -log Contador_hexbin.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Contador_hexbin.tcl
 # Log file: /home/axel/Documentos/Contador hexbin/Contador hexbin.runs/synth_1/Contador_hexbin.vds
@@ -15,28 +15,33 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 31459 
+INFO: Helper process launched with PID 17095 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1360.730 ; gain = 16.914 ; free physical = 926 ; free virtual = 2864
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1376.070 ; gain = 0.000 ; free physical = 959 ; free virtual = 2860
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Contador_hexbin' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:49]
-INFO: [Synth 8-226] default block is never used [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:70]
-INFO: [Synth 8-226] default block is never used [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:85]
-WARNING: [Synth 8-614] signal 'numeroD4' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:68]
-WARNING: [Synth 8-614] signal 'numeroD3' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:68]
-WARNING: [Synth 8-614] signal 'numeroD2' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:68]
-WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:68]
-WARNING: [Synth 8-614] signal 'accionActual' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:163]
-WARNING: [Synth 8-614] signal 'contando' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:176]
-WARNING: [Synth 8-6014] Unused sequential element contando_reg was removed.  [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:121]
-WARNING: [Synth 8-3848] Net displayActual in module/entity Contador_hexbin does not have driver. [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'Contador_hexbin' (1#1) [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'Contador_hexbin' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:50]
+INFO: [Synth 8-226] default block is never used [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:71]
+INFO: [Synth 8-226] default block is never used [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:86]
+WARNING: [Synth 8-614] signal 'numeroD4' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:69]
+WARNING: [Synth 8-614] signal 'numeroD3' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:69]
+WARNING: [Synth 8-614] signal 'numeroD2' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:69]
+WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:69]
+INFO: [Synth 8-226] default block is never used [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:178]
+WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:108]
+WARNING: [Synth 8-614] signal 'accionActual' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:199]
+WARNING: [Synth 8-614] signal 'contando' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:212]
+WARNING: [Synth 8-6014] Unused sequential element contando_reg was removed.  [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'Contador_hexbin' (1#1) [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:50]
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[3] driven by constant 0
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[2] driven by constant 0
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[1] driven by constant 0
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[0] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port indicador[1] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port indicador[0] driven by constant 0
 WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port manager
 WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 62.664 ; free physical = 937 ; free virtual = 2876
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.484 ; gain = 30.414 ; free physical = 971 ; free virtual = 2872
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,10 +54,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 62.664 ; free physical = 937 ; free virtual = 2876
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.484 ; gain = 30.414 ; free physical = 970 ; free virtual = 2872
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 62.664 ; free physical = 937 ; free virtual = 2876
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.484 ; gain = 30.414 ; free physical = 970 ; free virtual = 2872
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -63,33 +68,41 @@ Parsing XDC File [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc]
 Finished Parsing XDC File [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Contador_hexbin_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Contador_hexbin_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.379 ; gain = 0.000 ; free physical = 697 ; free virtual = 2636
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.891 ; gain = 0.000 ; free physical = 730 ; free virtual = 2631
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.379 ; gain = 0.000 ; free physical = 698 ; free virtual = 2637
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.891 ; gain = 0.000 ; free physical = 731 ; free virtual = 2632
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1716.379 ; gain = 0.000 ; free physical = 698 ; free virtual = 2637
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1716.379 ; gain = 0.000 ; free physical = 698 ; free virtual = 2637
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.891 ; gain = 0.000 ; free physical = 731 ; free virtual = 2632
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.891 ; gain = 0.000 ; free physical = 731 ; free virtual = 2632
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 764 ; free virtual = 2703
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 798 ; free virtual = 2699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 764 ; free virtual = 2703
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 798 ; free virtual = 2699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 766 ; free virtual = 2705
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 800 ; free virtual = 2701
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "displayActual" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "displayActual" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "displayActual" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numeroD2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numeroD2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numeroD3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numeroD3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numeroD4" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 757 ; free virtual = 2696
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 790 ; free virtual = 2692
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -105,12 +118,14 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 3     
 +---Registers : 
 	                4 Bit    Registers := 4     
-	                2 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 9     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -124,12 +139,14 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 3     
 +---Registers : 
 	                4 Bit    Registers := 4     
-	                2 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 9     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -146,69 +163,75 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[3] driven by constant 0
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[2] driven by constant 0
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[1] driven by constant 0
+WARNING: [Synth 8-3917] design Contador_hexbin has port display[0] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port indicador[1] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port indicador[0] driven by constant 0
 WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port manager
 WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port reset
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[3] with 1st driver pin 'numeroD1_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[2] with 1st driver pin 'numeroD1_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[1] with 1st driver pin 'numeroD1_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[0] with 1st driver pin 'numeroD1_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:110]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[3] with 1st driver pin 'numeroD2_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[2] with 1st driver pin 'numeroD2_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[1] with 1st driver pin 'numeroD2_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[0] with 1st driver pin 'numeroD2_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[3] with 1st driver pin 'numeroD3_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[2] with 1st driver pin 'numeroD3_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[1] with 1st driver pin 'numeroD3_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[0] with 1st driver pin 'numeroD3_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[3] with 1st driver pin 'numeroD4_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[2] with 1st driver pin 'numeroD4_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[1] with 1st driver pin 'numeroD4_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[0] with 1st driver pin 'numeroD4_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:118]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 1st driver pin 'indicador_inferred/indicador_reg[0]' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:165]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:165]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net indicador_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:165]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[1] with 1st driver pin 'indicador_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net indicador_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 1st driver pin 'indicador_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net indicador_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
+INFO: [Synth 8-3886] merging instance 'displayActual_reg[0]' (FDR) to 'displayActual_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\displayActual_reg[1] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[3] with 1st driver pin 'numeroD1_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[2] with 1st driver pin 'numeroD1_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[1] with 1st driver pin 'numeroD1_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[0] with 1st driver pin 'numeroD1_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD1_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD1_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[3] with 1st driver pin 'numeroD2_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[2] with 1st driver pin 'numeroD2_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[1] with 1st driver pin 'numeroD2_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[0] with 1st driver pin 'numeroD2_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD2_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD2_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:115]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[3] with 1st driver pin 'numeroD3_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[2] with 1st driver pin 'numeroD3_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[1] with 1st driver pin 'numeroD3_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[0] with 1st driver pin 'numeroD3_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD3_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD3_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[3] with 1st driver pin 'numeroD4_reg[3]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[3] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[2] with 1st driver pin 'numeroD4_reg[2]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[2] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[1] with 1st driver pin 'numeroD4_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[0] with 1st driver pin 'numeroD4_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin numeroD4_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net numeroD4_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:125]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 1st driver pin 'indicador_inferred/indicador_reg[0]' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:201]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:201]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net indicador_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:201]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[1] with 1st driver pin 'indicador_reg[1]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:135]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[1] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:135]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net indicador_reg[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:135]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 1st driver pin 'indicador_reg[0]/Q' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:135]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin indicador_reg[0] with 2nd driver pin 'GND' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:135]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net indicador_reg[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:135]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 755 ; free virtual = 2696
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 789 ; free virtual = 2692
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,13 +243,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 631 ; free virtual = 2572
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2568
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 631 ; free virtual = 2572
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2568
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -238,7 +261,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +285,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -275,7 +298,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,25 +310,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -332,25 +355,25 @@ Report Instance Areas:
 |1     |top      |       |    15|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.379 ; gain = 372.562 ; free physical = 630 ; free virtual = 2571
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.891 ; gain = 346.820 ; free physical = 664 ; free virtual = 2567
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 57 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1716.379 ; gain = 62.664 ; free physical = 685 ; free virtual = 2626
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1716.387 ; gain = 372.562 ; free physical = 686 ; free virtual = 2627
+Synthesis finished with 0 errors, 57 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1722.891 ; gain = 30.414 ; free physical = 718 ; free virtual = 2622
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1722.898 ; gain = 346.820 ; free physical = 719 ; free virtual = 2622
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.387 ; gain = 0.000 ; free physical = 628 ; free virtual = 2569
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.898 ; gain = 0.000 ; free physical = 661 ; free virtual = 2564
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-14 Infos, 16 Warnings, 57 Critical Warnings and 0 Errors encountered.
+25 Infos, 24 Warnings, 57 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1716.387 ; gain = 372.656 ; free physical = 685 ; free virtual = 2626
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.387 ; gain = 0.000 ; free physical = 685 ; free virtual = 2626
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1722.898 ; gain = 346.914 ; free physical = 718 ; free virtual = 2621
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.898 ; gain = 0.000 ; free physical = 718 ; free virtual = 2621
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/axel/Documentos/Contador hexbin/Contador hexbin.runs/synth_1/Contador_hexbin.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Contador_hexbin_utilization_synth.rpt -pb Contador_hexbin_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 23 17:24:31 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 23 21:01:57 2019...

@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
@@ -51,10 +52,10 @@ architecture Behavioral of Contador_hexbin is
     constant clockFreq : integer := 100e6;
     constant clockPer : time := 100 ms / clockFreq;
     signal timer : std_logic := '0'; -- señal de reloj
-    signal numeroD1 : std_logic_vector(3 downto 0) := "0000";
-    signal numeroD2 : std_logic_vector(3 downto 0) := "0000";
-    signal numeroD3 : std_logic_vector(3 downto 0) := "0000";
-    signal numeroD4 : std_logic_vector(3 downto 0) := "0000";
+    signal numeroD1 : UNSIGNED(3 downto 0) := "0000";
+    signal numeroD2 : UNSIGNED(3 downto 0) := "0000";
+    signal numeroD3 : UNSIGNED(3 downto 0) := "0000";
+    signal numeroD4 : UNSIGNED(3 downto 0) := "0000";
     signal activo : std_logic;
     signal contando : std_logic := '1';
     signal accionActual : std_logic := '0';
@@ -69,18 +70,18 @@ process(displayActual, numeroDisplay)
     begin
         case displayActual is
             when "00" =>
-                Display <= "0111";
-                numeroDisplay <= numeroD4;
+                display <= "0111";
+                numeroDisplay <= std_logic_vector(numeroD4);
             when "01" =>
-                Display <= "1011";
-                numeroDisplay <= numeroD3;
+                display <= "1011";
+                numeroDisplay <= std_logic_vector(numeroD3);
             when "10" =>
-                Display <= "1101";
-                numeroDisplay <= numeroD2;
+                display <= "1101";
+                numeroDisplay <= std_logic_vector(numeroD2);
             when "11" =>
-                Display <= "1110";
-                numeroDisplay <= numeroD1;
-            when others => Display <= "1110";
+                display <= "1110";
+                numeroDisplay <= std_logic_vector(numeroD1);
+            when others => display <= "1110";
         end case;
         case numeroDisplay is
             when "0000" => led <= "0000001"; -- 0     
@@ -101,6 +102,7 @@ process(displayActual, numeroDisplay)
             when "1111" => led <= "0111000"; -- F
             when others => led <= "0000001";
         end case;
+        Display <= "0000";
     end process;
 
 process (timer) is
@@ -109,13 +111,19 @@ process (timer) is
             if (esHex = '1') then
                 if (numeroD1 = "1111") then
                     numeroD1 <= "0000";
+                    displayActual <= "11";
                     numeroD2 <= numeroD2 + "0001";
+                    displayActual <= "10";
                     if (numeroD2 = "1111") then
                         numeroD2 <= "0000";
+                        displayActual <= "10";
                         numeroD3 <= numeroD2 + "0001";
+                        displayActual <= "01";
                         if (numeroD3 = "1111") then
                             numeroD3 <= "0000";
+                            displayActual <= "01";
                             numeroD4 <= numeroD4 + "0001";
+                            displayActual <= "00";
                             if (numeroD4 = "1111" and numeroD3 = "1111" and numeroD2 = "1111" and numeroD1 = "1111") then
                                 --Cuando se termine la cuenta se detiene
                                 contando <= '0';
@@ -129,18 +137,25 @@ process (timer) is
                         end if;
                     end if;
                 else
-                    numeroD1 <= numeroD1 + "0001";
+                    numeroD1 <= numeroD1 + 1;
+                    displayActual <= "11";
                 end if;
             else
                 if (numeroD1 = "1001") then
                     numeroD1 <= "0000";
+                    displayActual <= "11";
                     numeroD2 <= numeroD2 + "0001";
+                    displayActual <= "10";
                     if (numeroD2 = "1001") then
                         numeroD2 <= "0000";
+                        displayActual <= "10";
                         numeroD3 <= numeroD2 + "0001";
+                        displayActual <= "01";
                         if (numeroD3 = "1001") then
                             numeroD3 <= "0000";
+                            displayActual <= "01";
                             numeroD4 <= numeroD4 + "0001";
+                            displayActual <= "00";
                             if (numeroD4 = "1001" and numeroD3 = "1001" and numeroD2 = "1001" and numeroD1 = "1001") then
                                 --Cuando se termine la cuenta se detiene
                                 contando <= '0';
@@ -154,10 +169,31 @@ process (timer) is
                         end if;
                     end if;
                 else
-                    numeroD1 <= numeroD1 + "0001";
+                    numeroD1 <= numeroD1 + 1;
+                    displayActual <= "11";
                 end if;
             end if;
         end if;
+        display <= "0000";
+        case numeroD1 is
+            when "0000" => led <= "0000001"; -- 0     
+            when "0001" => led <= "1001111"; -- 1 
+            when "0010" => led <= "0010010"; -- 2 
+            when "0011" => led <= "0000110"; -- 3 
+            when "0100" => led <= "1001100"; -- 4 
+            when "0101" => led <= "0100100"; -- 5 
+            when "0110" => led <= "0100000"; -- 6 
+            when "0111" => led <= "0001111"; -- 7 
+            when "1000" => led <= "0000000"; -- 8     
+            when "1001" => led <= "0000100"; -- 9 
+            when "1010" => led <= "0001000"; -- A
+            when "1011" => led <= "1100000"; -- B
+            when "1100" => led <= "0110001"; -- C
+            when "1101" => led <= "1000010"; -- D
+            when "1110" => led <= "0110000"; -- E
+            when "1111" => led <= "0111000"; -- F
+            when others => led <= "0000001";
+        end case;
     end process;
 
 process (manager) is
