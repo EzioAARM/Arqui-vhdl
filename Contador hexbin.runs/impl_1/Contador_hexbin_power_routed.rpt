@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Apr 23 23:58:07 2019
+| Date             : Wed Apr 24 05:02:50 2019
 | Host             : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file Contador_hexbin_power_routed.rpt -pb Contador_hexbin_power_summary_routed.pb -rpx Contador_hexbin_power_routed.rpx
 | Design           : Contador_hexbin
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.600        |
+| Total On-Chip Power (W)  | 0.357        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.527        |
-| Device Static (W)        | 0.073        |
+| Dynamic (W)              | 0.285        |
+| Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 82.0         |
-| Junction Temperature (C) | 28.0         |
+| Max Ambient (C)          | 83.2         |
+| Junction Temperature (C) | 26.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.304 |      324 |       --- |             --- |
-|   LUT as Logic |     0.227 |      106 |     20800 |            0.51 |
-|   CARRY4       |     0.064 |       32 |      8150 |            0.39 |
-|   Register     |     0.007 |      130 |     41600 |            0.31 |
+| Slice Logic    |     0.179 |      248 |       --- |             --- |
+|   LUT as Logic |     0.106 |       66 |     20800 |            0.32 |
+|   CARRY4       |     0.060 |       32 |      8150 |            0.39 |
+|   Register     |     0.008 |      130 |     41600 |            0.31 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.219 |      312 |       --- |             --- |
+| Signals        |     0.101 |      235 |       --- |             --- |
 | I/O            |     0.004 |       15 |       106 |           14.15 |
-| Static Power   |     0.073 |          |           |                 |
-| Total          |     0.600 |          |           |                 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.357 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.538 |       0.527 |      0.011 |
+| Vccint    |       1.000 |     0.295 |       0.285 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,7 +138,7 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| Contador_hexbin |     0.527 |
+| Contador_hexbin |     0.285 |
 +-----------------+-----------+
 
 

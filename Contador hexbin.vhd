@@ -160,6 +160,28 @@ process (timer) is
                 end if;
             end if;
         end if;
+        display <= "0000";
+        case numeroD1 is
+            when 0 =>  led <= "0000001"; -- 0
+            when 1 =>  led <= "1001111"; -- 1
+            when 2 =>  led <= "0010010"; -- 2
+            when 3 =>  led <= "0000110"; -- 3
+            when 4 =>  led <= "1001100"; -- 4
+            when 5 =>  led <= "0100100"; -- 5
+            when 6 =>  led <= "1100000"; -- 6
+            when 7 =>  led <= "0001111"; -- 7
+            when 8 =>  led <= "0000000"; -- 8
+            when 9 =>  led <= "0000100"; -- 9
+            when 10 =>  led <= "0001000"; -- A
+            when 11 =>  led <= "1100000"; -- B
+            when 12 =>  led <= "0110001"; -- C
+            when 13 =>  led <= "1000010"; -- D
+            when 14 =>  led <= "0110000"; -- E
+            when 15 =>  led <= "0111000"; -- F
+            when others => led <= "1111111";
+        end case;
     end process;
+    
+    
 
 end Behavioral;

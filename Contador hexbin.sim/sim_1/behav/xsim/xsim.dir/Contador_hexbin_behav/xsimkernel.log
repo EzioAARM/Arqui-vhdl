@@ -1,4 +1,4 @@
-Running: xsim.dir/Contador_hexbin_behav/xsimk -simmode gui -wdb Contador_hexbin_behav.wdb -simrunnum 0 -socket 48269
+Running: xsim.dir/Contador_hexbin_behav/xsimk -simmode gui -wdb Contador_hexbin_behav.wdb -simrunnum 0 -socket 38723
 Design successfully loaded
-Design Loading Memory Usage: 43580 KB (Peak: 43700 KB)
-Design Loading CPU Usage: 20 ms
+Design Loading Memory Usage: 43584 KB (Peak: 43704 KB)
+Design Loading CPU Usage: 30 ms
