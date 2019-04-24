@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 24 07:42:23 2019
+| Date         : Wed Apr 24 07:47:58 2019
 | Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_methodology -file Contador_hexbin_methodology_drc_routed.rpt -pb Contador_hexbin_methodology_drc_routed.pb -rpx Contador_hexbin_methodology_drc_routed.rpx
 | Design       : Contador_hexbin
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 133
+             Violations found: 131
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 129        |
-| TIMING-20 | Warning  | Non-clocked latch           | 3          |
+| TIMING-20 | Warning  | Non-clocked latch           | 1          |
 | TIMING-23 | Warning  | Combinational loop found    | 1          |
 +-----------+----------+-----------------------------+------------+
 
@@ -680,16 +680,6 @@ The clock pin numeroD4_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#1 Warning
-Non-clocked latch  
-The latch indicador_reg[0] cannot be properly analyzed as its control pin indicador_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch indicador_reg[1] cannot be properly analyzed as its control pin indicador_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
 Non-clocked latch  
 The latch numeracionAct_reg cannot be properly analyzed as its control pin numeracionAct_reg/G is not reached by a timing clock
 Related violations: <none>

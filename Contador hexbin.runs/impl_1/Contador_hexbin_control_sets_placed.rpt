@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 24 07:41:40 2019
+| Date         : Wed Apr 24 07:47:12 2019
 | Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_control_sets -verbose -file Contador_hexbin_control_sets_placed.rpt
 | Design       : Contador_hexbin
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     7 |
-| Unused register locations in slices containing registers |    20 |
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    14 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,6 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      1 |            1 |
-|      2 |            1 |
 |      4 |            1 |
 |    16+ |            4 |
 +--------+--------------+
@@ -47,7 +46,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               7 |            7 |
+| No           | No                    | No                     |               5 |            4 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -59,16 +58,15 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------+----------------------+----------------------+------------------+----------------+
-|        Clock Signal       |     Enable Signal    |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
-+---------------------------+----------------------+----------------------+------------------+----------------+
-|  numeracionAct0           |                      |                      |                1 |              1 |
-|  indicador_reg[1]_i_1_n_0 |                      |                      |                2 |              2 |
-|  clk_BUFG                 |                      |                      |                4 |              4 |
-|  clk_BUFG                 | numeroD30            | numeroD3[31]_i_1_n_0 |                8 |             31 |
-|  clk_BUFG                 | contando             | numeroD1[31]_i_1_n_0 |                8 |             31 |
-|  clk_BUFG                 | numeroD1[31]_i_1_n_0 | numeroD2[31]_i_1_n_0 |                8 |             31 |
-|  clk_BUFG                 | numeroD40            | numeroD4[0]_i_1_n_0  |                8 |             32 |
-+---------------------------+----------------------+----------------------+------------------+----------------+
++-----------------+------------------+----------------------+------------------+----------------+
+|   Clock Signal  |   Enable Signal  |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++-----------------+------------------+----------------------+------------------+----------------+
+|  numeracionAct0 |                  |                      |                1 |              1 |
+|  clk_BUFG       |                  |                      |                3 |              4 |
+|  clk_BUFG       | numeroD30        | numeroD3[31]_i_1_n_0 |                8 |             31 |
+|  clk_BUFG       | contando_reg_n_0 | numeroD1[31]_i_1_n_0 |                8 |             31 |
+|  clk_BUFG       | numeroD20        | numeroD2[31]_i_1_n_0 |                8 |             31 |
+|  clk_BUFG       | numeroD40        | contando0            |                8 |             32 |
++-----------------+------------------+----------------------+------------------+----------------+
 
 
