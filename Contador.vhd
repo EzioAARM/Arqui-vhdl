@@ -84,19 +84,19 @@ end process;
 process(act)
 begin
     case act is
-    when "00" =>
-        Display <= "0111"; 
-        SDDisplay <= numero(15 downto 12);
-    when "01" =>
-        Display <= "1011"; 
-        SDDisplay <= numero(11 downto 8);
-    when "10" =>
-        Display <= "1101"; 
-        SDDisplay <= numero(7 downto 4);
-    when "11" =>
-        Display <= "1110"; 
-        SDDisplay <= numero(3 downto 0);
-
+        when "00" =>
+            Display <= "0111"; 
+            SDDisplay <= numero(15 downto 12);
+        when "01" =>
+            Display <= "1011"; 
+            SDDisplay <= numero(11 downto 8);
+        when "10" =>
+            Display <= "1101"; 
+            SDDisplay <= numero(7 downto 4);
+        when "11" =>
+            Display <= "1110"; 
+            SDDisplay <= numero(3 downto 0);
+        when others => Display <= "0000";
     end case;
 end process;
 

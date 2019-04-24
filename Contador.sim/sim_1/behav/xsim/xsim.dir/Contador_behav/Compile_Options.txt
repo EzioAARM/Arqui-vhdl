@@ -1,0 +1,1 @@
+-wto "f3dd813d3c36466bb7b10a9402be263a" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Contador_behav" "xil_defaultlib.Contador" -log "elaborate.log" 
