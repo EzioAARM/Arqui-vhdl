@@ -62,8 +62,8 @@ architecture Behavioral of Contador_hexbin is
     signal numeroD4 : integer := 0;
     
     
-    signal contando : integer := '1'; -- variable que ve si està contando o detenido
-    signal numeracionAct : integer; -- variable que indica si es decimal o hexadecimal, y cambia solo si el contador està e
+    signal contando : integer := 1; -- variable que ve si està contando o detenido
+    signal numeracionAct : integer := 1; -- variable que indica si es decimal o hexadecimal, y cambia solo si el contador està e
 
 begin
 
@@ -92,12 +92,12 @@ process (esHex) is
     -- Cambio entre numeraciòn decimal y hexadecimal (cambia solo si los nùmeros de los contadores son 0
         if (esHex = '1') then
             if (numeroD1 = 0 and numeroD2 = 0 and numeroD3 = 0 and numeroD4 = 0) then
-                numeracionAct <= '1'; -- 1 es hexadecimal
+                numeracionAct <= 1; -- 1 es hexadecimal
                 esHexIndicator <= '1';
             end if;
         else
             if (numeroD1 = 0 and numeroD2 = 0 and numeroD3 = 0 and numeroD4 = 0) then
-                numeracionAct <= '0'; -- 0 es decimal
+                numeracionAct <= 0; -- 0 es decimal
                 esHexIndicator <= '0';
             end if;
         end if;
@@ -105,20 +105,20 @@ process (esHex) is
 
 process (timer, manager, reset) is
     begin
---        if (reset = '1') then
---            contando <= '0';
---        elsif (manager = '1') then
---            if (contando = '1') then
---                contando <= '0'; -- se detiene;
---                indicador <= "10";
---            else
---                contando <= '1'; -- cuenta
---                indicador <= "01";
---            end if;
---        end if;
+        if (reset = '1') then
+            contando <= 0;
+        elsif (manager = '1') then
+            if (contando = 1) then
+                contando <= 0; -- se detiene;
+                indicador <= "10";
+            else
+                contando <= 1; -- cuenta
+                indicador <= "01";
+            end if;
+        end if;
         -- cada tic del timer
         if (rising_edge(timer)) then
-            if (numeracionAct = '1') then -- verifica si la nùmeraciòn es hexadecimal
+            if (numeracionAct = 1) then -- verifica si la nùmeraciòn es hexadecimal
                 if (numeroD1 = 15) then --como es decimal, si el numero es 15 corresponde a F (es el mayor nùmero en hex)
                     numeroD1 <= 0; -- lo regresa a 0
                     numeroD2 <= numeroD2 + 1; --aumenta 1 al siguiente digito
@@ -132,12 +132,11 @@ process (timer, manager, reset) is
                             -- luego de verificar todos, si todos son F regresa a 0 y detiene el contador
                             if (numeroD4 = 15 and numeroD3 = 15 and numeroD2 = 15 and numeroD1 = 15) then
                                 --Cuando se termine la cuenta se detiene
-                                contando <= '0';
+                                contando <= 0;
                                 numeroD1 <= 0;
                                 numeroD2 <= 0;
                                 numeroD3 <= 0;
                                 numeroD4 <= 0;
-                                contando <= '0';
                             end if;
                         end if;
                     end if;
@@ -156,12 +155,11 @@ process (timer, manager, reset) is
                             numeroD4 <= numeroD4 + 1;
                             if (numeroD4 = 9 and numeroD3 = 9 and numeroD2 = 9 and numeroD1 = 9) then -- cuando todos sean 9999 se regresa a 0 y se detiene el conteo
                                 --Cuando se termine la cuenta se detiene
-                                contando <= '0';
+                                contando <= 0;
                                 numeroD1 <= 0;
                                 numeroD2 <= 0;
                                 numeroD3 <= 0;
                                 numeroD4 <= 0;
-                                contando <= '0';
                             end if;
                         end if;
                     end if;
