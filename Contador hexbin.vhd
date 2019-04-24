@@ -66,25 +66,25 @@ begin
 
 timer <= not timer after clockPer; -- la señal cambia cada 100 ms
 
---process (reset) is
---    begin
---        if (reset = '1') then
---            contando <= '0';
---        end if;
---    end process;
+process (reset) is
+    begin
+        if (reset = '1') then
+            contando <= '0';
+        end if;
+    end process;
 
---process (manager, reset) is
---    begin
---        if (manager = '1') then
---            if (contando = '1') then
---                contando <= '0'; -- se detiene;
---                indicador <= "10";
---            else
---                contando <= '1'; -- cuenta
---                indicador <= "01";
---            end if;
---        end if;
---    end process;    
+process (manager, reset) is
+    begin
+        if (manager = '1') then
+            if (contando = '1') then
+                contando <= '0'; -- se detiene;
+                indicador <= "10";
+            else
+                contando <= '1'; -- cuenta
+                indicador <= "01";
+            end if;
+        end if;
+    end process;    
 
 process (esHex) is
     begin
