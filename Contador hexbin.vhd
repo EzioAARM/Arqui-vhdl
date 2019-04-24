@@ -38,7 +38,7 @@ Port (
     manager : in STD_LOGIC; -- boton para contar o detenerse
     esHex: in STD_LOGIC; -- switch para cambiar a binario o hexadecimal
     reset: in STD_LOGIC; -- boton para detener y reiniciar el contador.
-    timer: in STD_LOGIC;
+--    timer: in STD_LOGIC;
     
     display : out STD_LOGIC_VECTOR (3 downto 0); -- indica en que display se mostrarà el nùmero
     led : out STD_LOGIC_VECTOR (6 downto 0); -- indica que leds del display se encienden
@@ -53,7 +53,7 @@ architecture Behavioral of Contador_hexbin is
     constant clockPer : time := 10000 ns; -- periodo
 --    signal periodo : integer := 19;
 --    signal vector : std_logic_vector(19 downto 0) := (others => '0');
---    signal timer : std_logic := '0'; -- señal de reloj
+    signal timer : std_logic := '0'; -- señal de reloj
     
     -- digitos independientes
     signal numeroD1 : integer := 0;
@@ -73,7 +73,7 @@ begin
 --    end if;
 --end process;
 
---timer <= not timer after clockPer; -- la señal cambia cada 100 ms
+timer <= '1', '0' after 100 ms; -- la señal cambia cada 100 ms
 --process (timer, reset) is
 --    begin
 --        if (reset = '1') then
