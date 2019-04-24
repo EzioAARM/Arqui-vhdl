@@ -42,49 +42,82 @@ Port (
     display : out STD_LOGIC_VECTOR (3 downto 0); -- indica en que display se mostrarà el nùmero
     led : out STD_LOGIC_VECTOR (6 downto 0); -- indica que leds del display se encienden
     indicador : out STD_LOGIC_VECTOR(1 downto 0); -- indicador de que opciòn del botòn manager està activa
-    esHexIndicator : out STD_LOGIC
     -- contar 01, detenerse 10 y reset 00
+    esHexIndicator : out STD_LOGIC -- Led que ve si esta activado el switch para cambiar numeracion
 );
 end Contador_hexbin;
 
 architecture Behavioral of Contador_hexbin is
 
-    constant clockFreq : integer := 100e6;
-    constant clockPer : time := 100 ms / clockFreq;
+    constant clockPer : time := 100 ms; -- periodo
     signal timer : std_logic := '0'; -- señal de reloj
+    
+    -- digitos independientes
     signal numeroD1 : integer := 0;
     signal numeroD2 : integer := 0;
     signal numeroD3 : integer := 0;
     signal numeroD4 : integer := 0;
-    signal activo : std_logic;
-    signal contando : std_logic := '1';
-    signal accionActual : std_logic := '0';
-    signal displayActual : std_logic_vector(1 downto 0);
-    signal numeroDisplay : std_logic_vector (3 downto 0);
+    
+    
+    signal contando : std_logic := '1'; -- variable que ve si està contando o detenido
+    signal numeracionAct : std_logic; -- variable que indica si es decimal o hexadecimal, y cambia solo si el contador està e
 
 begin
 
-timer <= not timer after clockPer/2; -- la señal cambia cada 100 ms
+timer <= not timer after clockPer; -- la señal cambia cada 100 ms
+
+--process (reset) is
+--    begin
+--        if (reset = '1') then
+--            contando <= '0';
+--        end if;
+--    end process;
+
+--process (manager, reset) is
+--    begin
+--        if (manager = '1') then
+--            if (contando = '1') then
+--                contando <= '0'; -- se detiene;
+--                indicador <= "10";
+--            else
+--                contando <= '1'; -- cuenta
+--                indicador <= "01";
+--            end if;
+--        end if;
+--    end process;    
+
+process (esHex) is
+    begin
+    -- Cambio entre numeraciòn decimal y hexadecimal (cambia solo si los nùmeros de los contadores son 0
+        if (esHex = '1') then
+            if (numeroD1 = 0 and numeroD2 = 0 and numeroD3 = 0 and numeroD4 = 0) then
+                numeracionAct <= '1'; -- 1 es hexadecimal
+                esHexIndicator <= '1';
+            end if;
+        else
+            if (numeroD1 = 0 and numeroD2 = 0 and numeroD3 = 0 and numeroD4 = 0) then
+                numeracionAct <= '0'; -- 0 es decimal
+                esHexIndicator <= '0';
+            end if;
+        end if;
+    end process;
 
 process (timer) is
     begin
-        if (rising_edge(timer)) then
-            if (esHex = '1') then
-                if (numeroD1 = 15) then
-                    numeroD1 <= 0;
-                    displayActual <= "11";
-                    numeroD2 <= numeroD2 + 1;
-                    displayActual <= "10";
+        -- cada tic del timer
+        if (rising_edge(timer) and contando = '1') then
+            if (numeracionAct = '1') then -- verifica si la nùmeraciòn es hexadecimal
+                if (numeroD1 = 15) then --como es decimal, si el numero es 15 corresponde a F (es el mayor nùmero en hex)
+                    numeroD1 <= 0; -- lo regresa a 0
+                    numeroD2 <= numeroD2 + 1; --aumenta 1 al siguiente digito
+                    -- Hace lo anterior con todas las otras variables
                     if (numeroD2 = 15) then
                         numeroD2 <= 0;
-                        displayActual <= "10";
                         numeroD3 <= numeroD3 + 1;
-                        displayActual <= "01";
                         if (numeroD3 = 15) then
                             numeroD3 <= 0;
-                            displayActual <= "01";
                             numeroD4 <= numeroD4 + 1;
-                            displayActual <= "00";
+                            -- luego de verificar todos, si todos son F regresa a 0 y detiene el contador
                             if (numeroD4 = 15 and numeroD3 = 15 and numeroD2 = 15 and numeroD1 = 15) then
                                 --Cuando se termine la cuenta se detiene
                                 contando <= '0';
@@ -92,46 +125,38 @@ process (timer) is
                                 numeroD2 <= 0;
                                 numeroD3 <= 0;
                                 numeroD4 <= 0;
-                                accionActual <= '0';
+                                contando <= '0';
                                 indicador <= "10";
                             end if;
                         end if;
                     end if;
                 else
                     numeroD1 <= numeroD1 + 1;
-                    displayActual <= "11";
                 end if;
-            else
-                if (numeroD1 = 9) then
-                    numeroD1 <= 0;
-                    displayActual <= "11";
-                    numeroD2 <= numeroD2 + 1;
-                    displayActual <= "10";
-                    if (numeroD2 = 9) then
+            else -- sino es decimal
+                if (numeroD1 = 9) then -- 9 es el numero mayor para cada digito en decimal, cuando el digito es 9
+                    numeroD1 <= 0; -- regresa a 1
+                    numeroD2 <= numeroD2 + 1; -- aumenta 1 al siguiente digito
+                    if (numeroD2 = 9) then -- hace lo mismo con los siguientes digitos 
                         numeroD2 <= 0;
-                        displayActual <= "10";
                         numeroD3 <= numeroD3 + 1;
-                        displayActual <= "01";
                         if (numeroD3 = 9) then
                             numeroD3 <= 0;
-                            displayActual <= "01";
                             numeroD4 <= numeroD4 + 1;
-                            displayActual <= "00";
-                            if (numeroD4 = 9 and numeroD3 = 9 and numeroD2 = 9 and numeroD1 = 9) then
+                            if (numeroD4 = 9 and numeroD3 = 9 and numeroD2 = 9 and numeroD1 = 9) then -- cuando todos sean 9999 se regresa a 0 y se detiene el conteo
                                 --Cuando se termine la cuenta se detiene
                                 contando <= '0';
                                 numeroD1 <= 0;
                                 numeroD2 <= 0;
                                 numeroD3 <= 0;
                                 numeroD4 <= 0;
-                                accionActual <= '0';
+                                contando <= '0';
                                 indicador <= "10";
                             end if;
                         end if;
                     end if;
                 else
                     numeroD1 <= numeroD1 + 1;
-                    displayActual <= "11";
                 end if;
             end if;
         end if;
