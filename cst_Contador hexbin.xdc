@@ -14,8 +14,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports esHex]
 set_property IOSTANDARD LVCMOS33 [get_ports manager]
 set_property IOSTANDARD LVCMOS33 [get_ports reset]
-
 set_property IOSTANDARD LVCMOS33 [get_ports esHexIndicator]
+
 set_property PACKAGE_PIN W4 [get_ports {display[3]}]
 set_property PACKAGE_PIN V4 [get_ports {display[2]}]
 set_property PACKAGE_PIN U4 [get_ports {display[1]}]
@@ -34,5 +34,3 @@ set_property PACKAGE_PIN U16 [get_ports esHexIndicator]
 set_property PACKAGE_PIN T18 [get_ports manager]
 set_property PACKAGE_PIN T17 [get_ports reset]
 
-set_property PACKAGE_PIN W5 [get_ports timer]
-set_property IOSTANDARD LVCMOS33 [get_ports timer]

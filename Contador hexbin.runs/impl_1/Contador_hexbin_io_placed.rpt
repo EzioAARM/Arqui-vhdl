@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Wed Apr 24 05:34:50 2019
+| Date                      : Wed Apr 24 05:43:03 2019
 | Host                      : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command                   : report_io -file Contador_hexbin_io_placed.rpt
 | Design                    : Contador_hexbin
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            18 |
+|            17 |
 +---------------+
 
 
@@ -258,7 +258,7 @@ Table of Contents
 | W2         |                | High Range | IO_L5N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W3         |                | High Range | IO_L6N_T0_VREF_34            | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W4         | display[3]     | High Range | IO_L12N_T1_MRCC_34           | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| W5         | timer          | High Range | IO_L12P_T1_MRCC_34           | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| W5         |                | High Range | IO_L12P_T1_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W6         | led[5]         | High Range | IO_L13N_T2_MRCC_34           | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W7         | led[6]         | High Range | IO_L13P_T2_MRCC_34           | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W8         |                | Dedicated  | TDO_0                        | Config        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

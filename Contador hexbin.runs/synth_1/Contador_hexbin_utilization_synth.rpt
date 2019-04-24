@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 24 05:31:42 2019
+| Date         : Wed Apr 24 05:42:20 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file Contador_hexbin_utilization_synth.rpt -pb Contador_hexbin_utilization_synth.pb
 | Design       : Contador_hexbin
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   80 |     0 |     20800 |  0.38 |
-|   LUT as Logic          |   80 |     0 |     20800 |  0.38 |
+| Slice LUTs*             |   84 |     0 |     20800 |  0.40 |
+|   LUT as Logic          |   84 |     0 |     20800 |  0.40 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |  134 |     0 |     41600 |  0.32 |
 |   Register as Flip Flop |  130 |     0 |     41600 |  0.31 |
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       106 | 16.98 |
+| Bonded IOB                  |   17 |     0 |       106 | 16.04 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -150,16 +150,16 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  128 |        Flop & Latch |
-| LUT6     |   45 |                 LUT |
+| LUT6     |   47 |                 LUT |
 | CARRY4   |   32 |          CarryLogic |
 | OBUF     |   14 |                  IO |
-| LUT5     |   14 |                 LUT |
-| LUT3     |   13 |                 LUT |
-| LUT4     |   10 |                 LUT |
+| LUT5     |   13 |                 LUT |
+| LUT4     |   12 |                 LUT |
+| LUT3     |   12 |                 LUT |
 | LUT2     |    6 |                 LUT |
 | LDCE     |    4 |        Flop & Latch |
-| IBUF     |    4 |                  IO |
-| LUT1     |    1 |                 LUT |
+| IBUF     |    3 |                  IO |
+| LUT1     |    2 |                 LUT |
 | FDPE     |    1 |        Flop & Latch |
 | FDCE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
