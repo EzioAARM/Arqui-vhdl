@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 24 05:43:39 2019
+| Date         : Wed Apr 24 05:50:19 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -max_paths 10 -file Contador_hexbin_timing_summary_routed.rpt -pb Contador_hexbin_timing_summary_routed.pb -rpx Contador_hexbin_timing_summary_routed.rpx -warn_on_violation
 | Design       : Contador_hexbin
@@ -52,15 +52,11 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 3 register/latch pins with no clock driven by root clock pin: manager (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: manager (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: reset (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: reset (HIGH)
 
- There are 130 register/latch pins with no clock driven by root clock pin: clk_BUFG_inst/O (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: contando_reg_C/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: contando_reg_P/Q (HIGH)
+ There are 129 register/latch pins with no clock driven by root clock pin: clk_BUFG_inst/O (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: numeroD1_reg[0]/Q (HIGH)
 
@@ -331,7 +327,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 386 pins that are not constrained for maximum delay. (HIGH)
+ There are 382 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

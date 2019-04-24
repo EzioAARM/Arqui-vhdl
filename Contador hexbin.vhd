@@ -105,8 +105,9 @@ process (timer, manager, reset) is
                 contando <= '1'; -- cuenta
                 indicador <= "01";
             end if;
+        end if;
         -- cada tic del timer
-        elsif (rising_edge(timer) and contando = '1') then
+        if (rising_edge(timer) and contando = '1') then
             if (numeracionAct = '1') then -- verifica si la nùmeraciòn es hexadecimal
                 if (numeroD1 = 15) then --como es decimal, si el numero es 15 corresponde a F (es el mayor nùmero en hex)
                     numeroD1 <= 0; -- lo regresa a 0
