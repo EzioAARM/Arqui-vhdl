@@ -50,7 +50,7 @@ end Contador_hexbin;
 
 architecture Behavioral of Contador_hexbin is
 
-    constant clockPer : time := 1000 ms; -- periodo
+    constant clockPer : time := 10000 ns; -- periodo
 --    signal periodo : integer := 19;
 --    signal vector : std_logic_vector(19 downto 0) := (others => '0');
     signal timer : std_logic := '0'; -- señal de reloj
