@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 24 05:50:17 2019
-| Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
+| Date         : Wed Apr 24 07:35:13 2019
+| Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_methodology -file Contador_hexbin_methodology_drc_routed.rpt -pb Contador_hexbin_methodology_drc_routed.pb -rpx Contador_hexbin_methodology_drc_routed.rpx
 | Design       : Contador_hexbin
 | Device       : xc7a35tcpg236-1
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 133
+             Violations found: 132
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 129        |
 | TIMING-20 | Warning  | Non-clocked latch           | 3          |
-| TIMING-23 | Warning  | Combinational loop found    | 1          |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -692,11 +691,6 @@ Related violations: <none>
 TIMING-20#3 Warning
 Non-clocked latch  
 The latch numeracionAct_reg cannot be properly analyzed as its control pin numeracionAct_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-23#1 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between clk_BUFG_inst/I and clk_BUFG_inst/O to disable the timing loop
 Related violations: <none>
 
 
