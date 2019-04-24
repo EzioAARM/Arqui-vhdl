@@ -50,7 +50,7 @@ end Contador_hexbin;
 
 architecture Behavioral of Contador_hexbin is
 
-    constant clockPer : time := 100 ms; -- periodo
+    constant clockPer : time := 100000 ns; -- periodo
 --    signal periodo : integer := 19;
 --    signal vector : std_logic_vector(19 downto 0) := (others => '0');
     signal timer : std_logic := '0'; -- señal de reloj
@@ -117,7 +117,7 @@ process (timer, manager, reset) is
 --            end if;
 --        end if;
         -- cada tic del timer
-        if (rising_edge(timer) and contando = '1') then
+        if (rising_edge(timer)) then
             if (numeracionAct = '1') then -- verifica si la nùmeraciòn es hexadecimal
                 if (numeroD1 = 15) then --como es decimal, si el numero es 15 corresponde a F (es el mayor nùmero en hex)
                     numeroD1 <= 0; -- lo regresa a 0
