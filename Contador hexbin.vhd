@@ -38,6 +38,7 @@ Port (
     manager : in STD_LOGIC; -- boton para contar o detenerse
     esHex: in STD_LOGIC; -- switch para cambiar a binario o hexadecimal
     reset: in STD_LOGIC; -- boton para detener y reiniciar el contador.
+    timer: in STD_LOGIC;
     
     display : out STD_LOGIC_VECTOR (3 downto 0); -- indica en que display se mostrarà el nùmero
     led : out STD_LOGIC_VECTOR (6 downto 0); -- indica que leds del display se encienden
@@ -49,8 +50,8 @@ end Contador_hexbin;
 
 architecture Behavioral of Contador_hexbin is
 
-    constant clockPer : time := 100 ms; -- periodo
-    signal timer : std_logic := '0'; -- señal de reloj
+--    constant clockPer : time := 100 ms; -- periodo
+--    signal timer : std_logic := '0'; -- señal de reloj
     
     -- digitos independientes
     signal numeroD1 : integer := 0;
@@ -64,27 +65,17 @@ architecture Behavioral of Contador_hexbin is
 
 begin
 
-timer <= not timer after clockPer; -- la señal cambia cada 100 ms
+--timer <= not timer after clockPer; -- la señal cambia cada 100 ms
 
-process (reset) is
-    begin
-        if (reset = '1') then
-            contando <= '0';
-        end if;
-    end process;
+--process (reset) is
+--    begin
+        
+--    end process;
 
-process (manager, reset) is
-    begin
-        if (manager = '1') then
-            if (contando = '1') then
-                contando <= '0'; -- se detiene;
-                indicador <= "10";
-            else
-                contando <= '1'; -- cuenta
-                indicador <= "01";
-            end if;
-        end if;
-    end process;    
+--process (manager, reset) is
+--    begin
+        
+--    end process;    
 
 process (esHex) is
     begin
@@ -102,10 +93,20 @@ process (esHex) is
         end if;
     end process;
 
-process (timer) is
+process (timer, manager, reset) is
     begin
+        if (reset = '1') then
+            contando <= '0';
+        elsif (manager = '1') then
+            if (contando = '1') then
+                contando <= '0'; -- se detiene;
+                indicador <= "10";
+            else
+                contando <= '1'; -- cuenta
+                indicador <= "01";
+            end if;
         -- cada tic del timer
-        if (rising_edge(timer) and contando = '1') then
+        elsif (rising_edge(timer) and contando = '1') then
             if (numeracionAct = '1') then -- verifica si la nùmeraciòn es hexadecimal
                 if (numeroD1 = 15) then --como es decimal, si el numero es 15 corresponde a F (es el mayor nùmero en hex)
                     numeroD1 <= 0; -- lo regresa a 0
@@ -126,7 +127,6 @@ process (timer) is
                                 numeroD3 <= 0;
                                 numeroD4 <= 0;
                                 contando <= '0';
-                                indicador <= "10";
                             end if;
                         end if;
                     end if;
@@ -151,7 +151,6 @@ process (timer) is
                                 numeroD3 <= 0;
                                 numeroD4 <= 0;
                                 contando <= '0';
-                                indicador <= "10";
                             end if;
                         end if;
                     end if;
