@@ -38,7 +38,7 @@ Port (
     manager : in STD_LOGIC; -- boton para contar o detenerse
     esHex: in STD_LOGIC; -- switch para cambiar a binario o hexadecimal
     reset: in STD_LOGIC; -- boton para detener y reiniciar el contador.
---    timer: in STD_LOGIC;
+    timer: in STD_LOGIC;
     
     display : out STD_LOGIC_VECTOR (3 downto 0); -- indica en que display se mostrarà el nùmero
     led : out STD_LOGIC_VECTOR (6 downto 0); -- indica que leds del display se encienden
@@ -53,21 +53,27 @@ architecture Behavioral of Contador_hexbin is
     constant clockPer : time := 10000 ns; -- periodo
 --    signal periodo : integer := 19;
 --    signal vector : std_logic_vector(19 downto 0) := (others => '0');
-    signal timer : std_logic := '0'; -- señal de reloj
+--    signal timer : std_logic := '0'; -- señal de reloj
     
     -- digitos independientes
     signal numeroD1 : integer := 0;
     signal numeroD2 : integer := 0;
     signal numeroD3 : integer := 0;
     signal numeroD4 : integer := 0;
-    
+    signal timer_temp : std_logic_vector(3 downto 0) := "0000";
     
     signal contando : integer := 1; -- variable que ve si està contando o detenido
     signal numeracionAct : integer := 1; -- variable que indica si es decimal o hexadecimal, y cambia solo si el contador està e
 
 begin
 
-timer <= not timer after clockPer; -- la señal cambia cada 100 ms
+--proceso_contador: process(timer) begin
+--    if (rising_edge(timer)) then
+--        timer_temp <= timer_temp + 1;
+--    end if;
+--end process;
+
+--timer <= not timer after clockPer; -- la señal cambia cada 100 ms
 --process (timer, reset) is
 --    begin
 --        if (reset = '1') then
@@ -103,20 +109,20 @@ process (esHex) is
         end if;
     end process;
     
-process (manager, reset) is
-    begin
-        if (reset = '1') then
-            contando <= 0;
-        elsif (manager = '1') then
-            if (contando = 1) then
-                contando <= 0; -- se detiene;
-                indicador <= "10";
-            else
-                contando <= 1; -- cuenta
-                indicador <= "01";
-            end if;
-        end if;
-    end process;
+--process (manager, reset) is
+--    begin
+--        if (reset = '1') then
+--            contando <= 0;
+--        elsif (manager = '1') then
+--            if (contando = 1) then
+--                contando <= 0; -- se detiene;
+--                indicador <= "10";
+--            else
+--                contando <= 1; -- cuenta
+--                indicador <= "01";
+--            end if;
+--        end if;
+--    end process;
 
 process (timer, manager, reset) is
     begin

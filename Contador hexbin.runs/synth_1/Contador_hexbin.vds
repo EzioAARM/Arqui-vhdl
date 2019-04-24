@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Apr 24 08:21:18 2019
-# Process ID: 6716
+# Start of session at: Wed Apr 24 08:32:29 2019
+# Process ID: 10871
 # Current directory: /home/axel/Documentos/Contador hexbin/Contador hexbin.runs/synth_1
 # Command line: vivado -log Contador_hexbin.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Contador_hexbin.tcl
 # Log file: /home/axel/Documentos/Contador hexbin/Contador hexbin.runs/synth_1/Contador_hexbin.vds
@@ -15,24 +15,29 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6744 
+INFO: Helper process launched with PID 10888 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1360.172 ; gain = 70.914 ; free physical = 987 ; free virtual = 2212
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1360.730 ; gain = 15.914 ; free physical = 932 ; free virtual = 2205
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Contador_hexbin' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:51]
-WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:90]
-WARNING: [Synth 8-614] signal 'numeroD2' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:90]
-WARNING: [Synth 8-614] signal 'numeroD3' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:90]
-WARNING: [Synth 8-614] signal 'numeroD4' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:90]
-WARNING: [Synth 8-614] signal 'contando' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:106]
-WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:106]
+WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:96]
+WARNING: [Synth 8-614] signal 'numeroD2' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:96]
+WARNING: [Synth 8-614] signal 'numeroD3' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:96]
+WARNING: [Synth 8-614] signal 'numeroD4' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:96]
+WARNING: [Synth 8-614] signal 'numeroD1' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:127]
+WARNING: [Synth 8-6014] Unused sequential element contando_reg was removed.  [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:156]
+WARNING: [Synth 8-3848] Net indicador in module/entity Contador_hexbin does not have driver. [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'Contador_hexbin' (1#1) [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:51]
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[3] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[2] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[1] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[0] driven by constant 0
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port indicador[1]
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port indicador[0]
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port manager
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1405.922 ; gain = 116.664 ; free physical = 997 ; free virtual = 2225
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 61.664 ; free physical = 944 ; free virtual = 2217
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -45,10 +50,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1405.922 ; gain = 116.664 ; free physical = 996 ; free virtual = 2224
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 61.664 ; free physical = 943 ; free virtual = 2216
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1405.922 ; gain = 116.664 ; free physical = 996 ; free virtual = 2224
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 61.664 ; free physical = 943 ; free virtual = 2216
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -56,41 +61,34 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc]
-WARNING: [Vivado 12-584] No ports matched 'timer'. [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'timer'. [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Contador_hexbin_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Contador_hexbin_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.336 ; gain = 0.000 ; free physical = 724 ; free virtual = 1983
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.887 ; gain = 0.000 ; free physical = 702 ; free virtual = 1975
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.336 ; gain = 0.000 ; free physical = 724 ; free virtual = 1983
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.887 ; gain = 0.000 ; free physical = 703 ; free virtual = 1976
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.336 ; gain = 0.000 ; free physical = 724 ; free virtual = 1983
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.336 ; gain = 0.000 ; free physical = 724 ; free virtual = 1983
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.887 ; gain = 0.000 ; free physical = 703 ; free virtual = 1976
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.887 ; gain = 0.000 ; free physical = 703 ; free virtual = 1976
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 790 ; free virtual = 2049
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 770 ; free virtual = 2044
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 790 ; free virtual = 2049
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 770 ; free virtual = 2044
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 792 ; free virtual = 2051
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 772 ; free virtual = 2045
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'contando_reg' in module 'Contador_hexbin'
 INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "numeroD1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "numeroD1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -104,21 +102,10 @@ INFO: [Synth 8-5545] ROM "numeroD3" won't be mapped to RAM because address size 
 INFO: [Synth 8-5545] ROM "numeroD3" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "numeroD4" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "numeroD4" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "indicador" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "contando" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-327] inferring latch for variable 'numeracionAct_reg' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'indicador_reg' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:113]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                                0 | 00000000000000000000000000000000
-*
-                 iSTATE0 |                                1 | 00000000000000000000000000000001
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'contando_reg' using encoding 'sequential' in module 'Contador_hexbin'
-WARNING: [Synth 8-327] inferring latch for variable 'esHexIndicator_reg' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'numeracionAct_reg' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'esHexIndicator_reg' [/home/axel/Documentos/Contador hexbin/Contador hexbin.vhd:102]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 783 ; free virtual = 2043
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 762 ; free virtual = 2036
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -137,9 +124,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 9     
 	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 21    
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -156,9 +141,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 9     
 	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 21    
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -179,6 +162,10 @@ WARNING: [Synth 8-3917] design Contador_hexbin has port display[3] driven by con
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[2] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[1] driven by constant 0
 WARNING: [Synth 8-3917] design Contador_hexbin has port display[0] driven by constant 0
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port indicador[1]
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port indicador[0]
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port manager
+WARNING: [Synth 8-3331] design Contador_hexbin has unconnected port reset
 INFO: [Synth 8-3886] merging instance 'numeracionAct_reg[1]' (LD) to 'numeracionAct_reg[31]'
 INFO: [Synth 8-3886] merging instance 'numeracionAct_reg[2]' (LD) to 'numeracionAct_reg[31]'
 INFO: [Synth 8-3886] merging instance 'numeracionAct_reg[3]' (LD) to 'numeracionAct_reg[31]'
@@ -212,7 +199,7 @@ INFO: [Synth 8-3886] merging instance 'numeracionAct_reg[30]' (LD) to 'numeracio
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numeracionAct_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (numeracionAct_reg[31]) is unused and will be removed from module Contador_hexbin.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 761 ; free virtual = 2024
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 741 ; free virtual = 2017
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -224,13 +211,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 631 ; free virtual = 1902
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 618 ; free virtual = 1894
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1723.336 ; gain = 434.078 ; free physical = 631 ; free virtual = 1902
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1723.887 ; gain = 379.070 ; free physical = 618 ; free virtual = 1894
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -242,7 +229,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -266,7 +253,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -279,7 +266,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -291,25 +278,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,47 +314,48 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    32|
-|3     |LUT1   |     4|
+|3     |LUT1   |     2|
 |4     |LUT2   |     9|
-|5     |LUT3   |     5|
-|6     |LUT4   |     9|
-|7     |LUT5   |    12|
+|5     |LUT3   |     3|
+|6     |LUT4   |     6|
+|7     |LUT5   |     9|
 |8     |LUT6   |    41|
-|9     |FDRE   |   129|
-|10    |LD     |     4|
-|11    |IBUF   |     3|
-|12    |OBUF   |    14|
+|9     |FDRE   |   128|
+|10    |LD     |     2|
+|11    |IBUF   |     2|
+|12    |OBUF   |    12|
+|13    |OBUFT  |     2|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   263|
+|1     |top      |       |   249|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.344 ; gain = 442.086 ; free physical = 629 ; free virtual = 1900
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1731.895 ; gain = 387.078 ; free physical = 616 ; free virtual = 1892
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1731.344 ; gain = 124.672 ; free physical = 683 ; free virtual = 1953
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1731.352 ; gain = 442.086 ; free physical = 694 ; free virtual = 1965
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1731.895 ; gain = 69.672 ; free physical = 669 ; free virtual = 1945
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1731.902 ; gain = 387.078 ; free physical = 669 ; free virtual = 1945
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.352 ; gain = 0.000 ; free physical = 627 ; free virtual = 1898
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.902 ; gain = 0.000 ; free physical = 615 ; free virtual = 1890
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  LD => LDCE: 4 instances
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 20 Warnings, 2 Critical Warnings and 0 Errors encountered.
+58 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1731.352 ; gain = 442.180 ; free physical = 683 ; free virtual = 1954
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.352 ; gain = 0.000 ; free physical = 683 ; free virtual = 1954
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1731.902 ; gain = 387.172 ; free physical = 671 ; free virtual = 1946
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.902 ; gain = 0.000 ; free physical = 671 ; free virtual = 1946
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/axel/Documentos/Contador hexbin/Contador hexbin.runs/synth_1/Contador_hexbin.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Contador_hexbin_utilization_synth.rpt -pb Contador_hexbin_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 24 08:22:23 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 24 08:33:21 2019...

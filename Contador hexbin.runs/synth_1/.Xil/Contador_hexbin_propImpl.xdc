@@ -1,6 +1,4 @@
 set_property SRC_FILE_INFO {cfile:{/home/axel/Documentos/Contador hexbin/cst_Contador hexbin.xdc} rfile:{../../../cst_Contador hexbin.xdc} id:1} [current_design]
-set_property src_info {type:XDC file:1 line:18 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCMOS33 [get_ports timer]
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W4 [get_ports {display[3]}]
 set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
