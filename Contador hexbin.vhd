@@ -102,8 +102,8 @@ process (esHex) is
             end if;
         end if;
     end process;
-
-process (timer, manager, reset) is
+    
+process (manager, reset) is
     begin
         if (reset = '1') then
             contando <= 0;
@@ -116,6 +116,21 @@ process (timer, manager, reset) is
                 indicador <= "01";
             end if;
         end if;
+    end process;
+
+process (timer, manager, reset) is
+    begin
+--        if (reset = '1') then
+--            contando <= 0;
+--        elsif (manager = '1') then
+--            if (contando = 1) then
+--                contando <= 0; -- se detiene;
+--                indicador <= "10";
+--            else
+--                contando <= 1; -- cuenta
+--                indicador <= "01";
+--            end if;
+--        end if;
         -- cada tic del timer
         if (rising_edge(timer)) then
             if (numeracionAct = 1) then -- verifica si la nùmeraciòn es hexadecimal
