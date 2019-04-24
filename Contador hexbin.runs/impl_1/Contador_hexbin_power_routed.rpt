@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Wed Apr 24 07:35:14 2019
+| Date             : Wed Apr 24 07:42:24 2019
 | Host             : axel-VirtualBox running 64-bit unknown
 | Command          : report_power -file Contador_hexbin_power_routed.rpt -pb Contador_hexbin_power_summary_routed.pb -rpx Contador_hexbin_power_routed.rpx
 | Design           : Contador_hexbin
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.068        |
+| Total On-Chip Power (W)  | 1.063        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.994        |
+| Dynamic (W)              | 0.989        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 79.7         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.071 |      254 |       --- |             --- |
-|   CARRY4       |     0.057 |       32 |      8150 |            0.39 |
-|   LUT as Logic |     0.008 |       74 |     20800 |            0.36 |
+| Slice Logic    |     0.074 |      255 |       --- |             --- |
+|   CARRY4       |     0.056 |       32 |      8150 |            0.39 |
+|   LUT as Logic |     0.012 |       74 |     20800 |            0.36 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        4 |       --- |             --- |
 |   Register     |     0.000 |      132 |     41600 |            0.32 |
-| Signals        |     0.047 |      244 |       --- |             --- |
-| I/O            |     0.875 |       18 |       106 |           16.98 |
+| Signals        |     0.044 |      245 |       --- |             --- |
+| I/O            |     0.871 |       17 |       106 |           16.04 |
 | Static Power   |     0.074 |          |           |                 |
-| Total          |     1.068 |          |           |                 |
+| Total          |     1.063 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.146 |       0.134 |      0.012 |
+| Vccint    |       1.000 |     0.141 |       0.130 |      0.012 |
 | Vccaux    |       1.800 |     0.044 |       0.031 |      0.013 |
 | Vcco33    |       3.300 |     0.244 |       0.243 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,7 +138,7 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| Contador_hexbin |     0.994 |
+| Contador_hexbin |     0.989 |
 +-----------------+-----------+
 
 

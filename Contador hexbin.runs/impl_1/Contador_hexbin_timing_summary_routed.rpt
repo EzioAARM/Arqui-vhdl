@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 24 07:35:14 2019
+| Date         : Wed Apr 24 07:42:24 2019
 | Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_timing_summary -max_paths 10 -file Contador_hexbin_timing_summary_routed.rpt -pb Contador_hexbin_timing_summary_routed.pb -rpx Contador_hexbin_timing_summary_routed.rpx -warn_on_violation
 | Design       : Contador_hexbin
@@ -56,7 +56,7 @@ Table of Contents
 
  There are 2 register/latch pins with no clock driven by root clock pin: reset (HIGH)
 
- There are 129 register/latch pins with no clock driven by root clock pin: timer (HIGH)
+ There are 129 register/latch pins with no clock driven by root clock pin: clk_BUFG_inst/O (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: numeroD1_reg[0]/Q (HIGH)
 
@@ -360,7 +360,7 @@ Table of Contents
 
 9. checking loops
 -----------------
- There are 0 combinational loops in the design.
+ There is 1 combinational loop in the design. (HIGH)
 
 
 10. checking partial_input_delay
