@@ -78,7 +78,7 @@ process (timer) is
                     if (numeroD2 = 15) then
                         numeroD2 <= 0;
                         displayActual <= "10";
-                        numeroD3 <= numeroD2 + 1;
+                        numeroD3 <= numeroD3 + 1;
                         displayActual <= "01";
                         if (numeroD3 = 15) then
                             numeroD3 <= 0;
