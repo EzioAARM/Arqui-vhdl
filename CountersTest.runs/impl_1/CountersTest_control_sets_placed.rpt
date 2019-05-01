@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed May  1 15:17:20 2019
-| Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
+| Date         : Wed May  1 15:39:18 2019
+| Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_control_sets -verbose -file CountersTest_control_sets_placed.rpt
 | Design       : CountersTest
 | Device       : xc7a35t
@@ -56,10 +56,10 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+---------------+------------------+------------------+----------------+
-| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+---------------+------------------+------------------+----------------+
-|  clk_BUFG    |               |                  |               14 |             39 |
-+--------------+---------------+------------------+------------------+----------------+
++----------------+---------------+------------------+------------------+----------------+
+|  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+---------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG |               |                  |               14 |             39 |
++----------------+---------------+------------------+------------------+----------------+
 
 
