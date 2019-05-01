@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed May  1 10:51:15 2019
+| Date         : Wed May  1 11:03:22 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -max_paths 10 -file Calculadora_timing_summary_routed.rpt -pb Calculadora_timing_summary_routed.pb -rpx Calculadora_timing_summary_routed.rpx -warn_on_violation
 | Design       : Calculadora
