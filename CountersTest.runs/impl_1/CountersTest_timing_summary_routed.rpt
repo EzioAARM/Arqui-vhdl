@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed May  1 14:53:26 2019
+| Date         : Wed May  1 15:03:43 2019
 | Host         : axel-VirtualBox running 64-bit unknown
 | Command      : report_timing_summary -max_paths 10 -file CountersTest_timing_summary_routed.rpt -pb CountersTest_timing_summary_routed.pb -rpx CountersTest_timing_summary_routed.rpx -warn_on_violation
 | Design       : CountersTest
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 39 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 39 register/latch pins with no clock driven by root clock pin: clk_BUFG_inst/O (HIGH)
 
 
 2. checking constant_clock
@@ -67,7 +67,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 70 pins that are not constrained for maximum delay. (HIGH)
+ There are 39 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -100,7 +100,7 @@ Table of Contents
 
 9. checking loops
 -----------------
- There are 0 combinational loops in the design.
+ There is 1 combinational loop in the design. (HIGH)
 
 
 10. checking partial_input_delay
@@ -115,7 +115,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 0 combinational latch loops in the design through latch input
+ There are 32 combinational latch loops in the design through latch input (HIGH)
 
 
 
