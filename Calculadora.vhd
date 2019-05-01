@@ -99,7 +99,7 @@ displays <= "1110";
                     when 7 => leds <= "0001111";
                     when 8 => leds <= "0000000";
                     when 9 => leds <= "0000100";
-                    when others => leds <= "0000000";
+                    when others => leds <= "1111111";
                 end case;
             elsif (set_pos = '1') then
                 if (presiono = 0) then

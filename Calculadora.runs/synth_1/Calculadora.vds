@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed May  1 12:52:16 2019
-# Process ID: 5368
+# Start of session at: Wed May  1 12:58:18 2019
+# Process ID: 7528
 # Current directory: /home/axel/Documentos/Calculadora/Calculadora.runs/synth_1
 # Command line: vivado -log Calculadora.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Calculadora.tcl
 # Log file: /home/axel/Documentos/Calculadora/Calculadora.runs/synth_1/Calculadora.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5387 
+INFO: Helper process launched with PID 7553 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1360.730 ; gain = 16.914 ; free physical = 1989 ; free virtual = 3282
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1360.734 ; gain = 16.914 ; free physical = 1981 ; free virtual = 3279
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Calculadora' [/home/axel/Documentos/Calculadora/Calculadora.vhd:52]
 WARNING: [Synth 8-614] signal 'posicion' is read in the process but is not in the sensitivity list [/home/axel/Documentos/Calculadora/Calculadora.vhd:71]
@@ -41,7 +41,7 @@ WARNING: [Synth 8-3917] design Calculadora has port displays[2] driven by consta
 WARNING: [Synth 8-3917] design Calculadora has port displays[1] driven by constant 1
 WARNING: [Synth 8-3917] design Calculadora has port displays[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.480 ; gain = 62.664 ; free physical = 2001 ; free virtual = 3294
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.484 ; gain = 62.664 ; free physical = 1993 ; free virtual = 3291
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -54,10 +54,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.480 ; gain = 62.664 ; free physical = 2001 ; free virtual = 3294
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.484 ; gain = 62.664 ; free physical = 1992 ; free virtual = 3291
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.480 ; gain = 62.664 ; free physical = 2001 ; free virtual = 3294
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1406.484 ; gain = 62.664 ; free physical = 1992 ; free virtual = 3291
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -68,30 +68,30 @@ Parsing XDC File [/home/axel/Documentos/Calculadora/cst_Calculadora.xdc]
 Finished Parsing XDC File [/home/axel/Documentos/Calculadora/cst_Calculadora.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/axel/Documentos/Calculadora/cst_Calculadora.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Calculadora_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Calculadora_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.371 ; gain = 0.000 ; free physical = 1760 ; free virtual = 3052
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.367 ; gain = 0.000 ; free physical = 1752 ; free virtual = 3050
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.371 ; gain = 0.000 ; free physical = 1760 ; free virtual = 3053
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.367 ; gain = 0.000 ; free physical = 1752 ; free virtual = 3050
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.371 ; gain = 0.000 ; free physical = 1760 ; free virtual = 3053
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.371 ; gain = 0.000 ; free physical = 1760 ; free virtual = 3053
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.367 ; gain = 0.000 ; free physical = 1752 ; free virtual = 3050
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.367 ; gain = 0.000 ; free physical = 1752 ; free virtual = 3050
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1828 ; free virtual = 3122
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1820 ; free virtual = 3118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1828 ; free virtual = 3122
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1820 ; free virtual = 3118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1830 ; free virtual = 3124
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1821 ; free virtual = 3120
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/axel/Documentos/Calculadora/Calculadora.vhd:73]
 INFO: [Synth 8-5587] ROM size for "leds" is below threshold of ROM address width. It will be mapped to LUTs
@@ -111,7 +111,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'presiono_reg' [/home/axel/D
 WARNING: [Synth 8-327] inferring latch for variable 'op1_reg' [/home/axel/Documentos/Calculadora/Calculadora.vhd:106]
 WARNING: [Synth 8-327] inferring latch for variable 'op2_reg' [/home/axel/Documentos/Calculadora/Calculadora.vhd:109]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1820 ; free virtual = 3114
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1812 ; free virtual = 3111
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -179,7 +179,7 @@ WARNING: [Synth 8-3917] design Calculadora has port displays[2] driven by consta
 WARNING: [Synth 8-3917] design Calculadora has port displays[1] driven by constant 1
 WARNING: [Synth 8-3917] design Calculadora has port displays[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1801 ; free virtual = 3096
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1793 ; free virtual = 3093
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -191,13 +191,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1680 ; free virtual = 2975
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1671 ; free virtual = 2972
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1712.371 ; gain = 368.555 ; free physical = 1680 ; free virtual = 2975
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1712.367 ; gain = 368.547 ; free physical = 1671 ; free virtual = 2972
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -209,7 +209,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2970
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -233,7 +233,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -246,7 +246,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -258,25 +258,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -311,17 +311,17 @@ Report Instance Areas:
 |1     |top      |       |   234|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1713.379 ; gain = 369.562 ; free physical = 1679 ; free virtual = 2974
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.375 ; gain = 376.555 ; free physical = 1670 ; free virtual = 2971
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1713.379 ; gain = 63.672 ; free physical = 1732 ; free virtual = 3027
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1713.387 ; gain = 369.562 ; free physical = 1732 ; free virtual = 3027
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1720.375 ; gain = 70.672 ; free physical = 1724 ; free virtual = 3025
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1720.383 ; gain = 376.555 ; free physical = 1735 ; free virtual = 3036
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1719.379 ; gain = 0.000 ; free physical = 1676 ; free virtual = 2971
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1720.383 ; gain = 0.000 ; free physical = 1667 ; free virtual = 2968
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 93 instances were transformed.
   LD => LDCE: 93 instances
@@ -329,10 +329,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 21 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1719.379 ; gain = 375.648 ; free physical = 1733 ; free virtual = 3028
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1719.379 ; gain = 0.000 ; free physical = 1733 ; free virtual = 3028
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1720.383 ; gain = 376.648 ; free physical = 1724 ; free virtual = 3025
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1720.383 ; gain = 0.000 ; free physical = 1724 ; free virtual = 3025
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/axel/Documentos/Calculadora/Calculadora.runs/synth_1/Calculadora.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Calculadora_utilization_synth.rpt -pb Calculadora_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May  1 12:53:08 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed May  1 12:59:09 2019...
