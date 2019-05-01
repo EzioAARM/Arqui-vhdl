@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed May  1 11:03:22 2019
+| Date         : Wed May  1 11:56:41 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -max_paths 10 -file Calculadora_timing_summary_routed.rpt -pb Calculadora_timing_summary_routed.pb -rpx Calculadora_timing_summary_routed.rpx -warn_on_violation
 | Design       : Calculadora
@@ -52,103 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 93 register/latch pins with no clock driven by root clock pin: guardar (HIGH)
-
- There are 93 register/latch pins with no clock driven by root clock pin: mostrar (HIGH)
-
- There are 30 register/latch pins with no clock driven by root clock pin: posicion[0] (HIGH)
-
- There are 30 register/latch pins with no clock driven by root clock pin: posicion[1] (HIGH)
-
- There are 30 register/latch pins with no clock driven by root clock pin: posicion[2] (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: resta (HIGH)
-
- There are 81 register/latch pins with no clock driven by root clock pin: set_pos (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: suma (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: op1_reg[0]/Q (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: op1_reg[1]/Q (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: op1_reg[2]/Q (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: op2_reg[0]/Q (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: op2_reg[1]/Q (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: op2_reg[2]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[0]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[10]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[11]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[12]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[13]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[14]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[15]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[16]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[17]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[18]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[19]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[1]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[20]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[21]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[22]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[23]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[24]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[25]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[26]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[27]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[28]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[29]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[2]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[30]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[31]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[3]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[4]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[5]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[6]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[7]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[8]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: presiono_reg[9]/Q (HIGH)
-
- There are 25 register/latch pins with no clock driven by root clock pin: res_reg[0]/Q (HIGH)
-
- There are 25 register/latch pins with no clock driven by root clock pin: res_reg[1]/Q (HIGH)
-
- There are 25 register/latch pins with no clock driven by root clock pin: res_reg[2]/Q (HIGH)
+ There are 19 register/latch pins with no clock driven by root clock pin: reloj (HIGH)
 
 
 2. checking constant_clock
@@ -163,21 +67,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 93 pins that are not constrained for maximum delay. (HIGH)
+ There are 53 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 10 input ports with no input delay specified. (HIGH)
+ There is 1 input port with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 7 ports with no output delay specified. (HIGH)
+ There are 10 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -211,7 +115,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 32 combinational latch loops in the design through latch input (HIGH)
+ There are 0 combinational latch loops in the design through latch input
 
 
 
