@@ -70,59 +70,6 @@ begin
 
 displays <= "1110";
 
---    show_display: process(refresh_state) is
---        begin
---            case refresh_state is
---                when "00" => display_sel <= "1110";
---                when "01" => display_sel <= "1101";
---                when "10" => display_sel <= "1011";
---                when "11" => display_sel <= "0111";
---                when others => display_sel <= "1111";
---            end case;
---            numMostrarInt <= conv_integer(numeroMostrar);
---            d2 <= numMostrarInt / 10;
---            d2 <= d2 * 10;
---            d1 <= numMostrarInt - d2;
---            case d1 is
---                when 0 => shd1 <= "0000001";
---                when 1 => shd1 <= "1001111";
---                when 2 => shd1 <= "0010010";
---                when 3 => shd1 <= "0000110";
---                when 4 => shd1 <= "1001100";
---                when 5 => shd1 <= "0100100";
---                when 6 => shd1 <= "0100000";
---                when 7 => shd1 <= "0001111";
---                when 8 => shd1 <= "0000000";
---                when 9 => shd1 <= "0000100";
---                when others => shd1 <= "0000000";
---            end case;
---            case d2 is
---                when 0 => shd2 <= "0000001";
---                when 1 => shd2 <= "1001111";
---                when 2 => shd2 <= "0010010";
---                when 3 => shd2 <= "0000110";
---                when 4 => shd2 <= "1001100";
---                when 5 => shd2 <= "0100100";
---                when 6 => shd2 <= "0100000";
---                when 7 => shd2 <= "0001111";
---                when 8 => shd2 <= "0000000";
---                when 9 => shd2 <= "0000100";
---                when others => shd2 <= "0000000";
---            end case;
---            case display_sel is
---                when "1110" => 
---                    leds <= shd1; -- 0 
---                when "1101" => 
---                    leds <= shd1; -- 1 
---                when "1011" => 
---                    leds <= "0000001"; -- 2 
---                when "0111" => 
---                    leds <= "0000001"; -- 3 
---                when others =>
---                    leds <= "0000001"; 
---            end case;
---        end process;
-    
     process (guardar, mostrar, set_pos, suma, resta) is
         begin
             if (guardar = '1') then
@@ -156,36 +103,7 @@ displays <= "1110";
                     when 9 => shd1 <= "0000100";
                     when others => shd1 <= "0000000";
                 end case;
---                case d1 is
---                    when 0 => shd1 <= "0000001";
---                    when 1 => shd1 <= "1001111";
---                    when 2 => shd1 <= "0010010";
---                    when 3 => shd1 <= "0000110";
---                    when 4 => shd1 <= "1001100";
---                    when 5 => shd1 <= "0100100";
---                    when 6 => shd1 <= "0100000";
---                    when 7 => shd1 <= "0001111";
---                    when 8 => shd1 <= "0000000";
---                    when 9 => shd1 <= "0000100";
---                    when others => shd1 <= "0000000";
---                end case;
---                case d2 is
---                    when 0 => shd2 <= "0000001";
---                    when 1 => shd2 <= "1001111";
---                    when 2 => shd2 <= "0010010";
---                    when 3 => shd2 <= "0000110";
---                    when 4 => shd2 <= "1001100";
---                    when 5 => shd2 <= "0100100";
---                    when 6 => shd2 <= "0100000";
---                    when 7 => shd2 <= "0001111";
---                    when 8 => shd2 <= "0000000";
---                    when 9 => shd2 <= "0000100";
---                    when others => shd2 <= "0000000";
---                end case;
---                displays <= "1110";
---                leds <= shd1;
---                displays <= "1101";
---                leds <= shd2;
+                leds <= shd1;
             elsif (set_pos = '1') then
                 if (presiono = 0) then
                     op1 <= posicion;
