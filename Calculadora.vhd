@@ -37,6 +37,9 @@ Port (
     posicion: in std_logic_vector(2 downto 0);
     guardar: in std_logic;
     mostrar: in std_logic;
+    set_pos: in std_logic;
+    suma: in std_logic;
+    resta: in std_logic;
     leds: out std_logic_vector(6 downto 0);
     displays: out std_logic_vector(3 downto 0)
 );
@@ -49,11 +52,19 @@ signal n3 : std_logic_vector(4 downto 0) := "00000";
 signal n4 : std_logic_vector(4 downto 0) := "00000";
 signal n5 : std_logic_vector(4 downto 0) := "00000";
 signal numeroMostrar : std_logic_vector(4 downto 0);
+
+signal op1 : std_logic_vector(2 downto 0) := "000";
+signal op2 : std_logic_vector(2 downto 0) := "000";
+signal res : std_logic_vector(2 downto 0) := "000";
+signal calc1 : std_logic_vector(4 downto 0) := "00000";
+signal calc2 : std_logic_vector(4 downto 0) := "00000";
+signal total : std_logic_vector(4 downto 0) := "00000";
+signal presiono : integer := 0;
 begin
 
     displays <= "1100";
     
-    process (guardar, mostrar) is
+    process (guardar, mostrar, set_pos, suma, resta) is
         begin
             if (guardar = '1') then
                 case posicion is
@@ -85,6 +96,69 @@ begin
                     when "01000" => leds <= "0000000";
                     when "01001" => leds <= "0000100";
                     when others => leds <= "1111111";
+                end case;
+            elsif (set_pos = '1') then
+                if (presiono = 0) then
+                    op1 <= posicion;
+                    presiono <= presiono + 1;
+                elsif (presiono = 1) then
+                    op2 <= posicion;
+                    presiono <= presiono + 1;
+                elsif (presiono = 2) then
+                    res <= posicion;
+                    presiono <= 0;
+                end if;
+            elsif (suma = '1') then
+                case op1 is
+                    when "000" => calc1 <= n1;
+                    when "001" => calc1 <= n2;
+                    when "010" => calc1 <= n3;
+                    when "011" => calc1 <= n4;
+                    when "100" => calc1 <= n5;
+                    when others => null;
+                end case;
+                case op2 is
+                    when "000" => calc2 <= n1;
+                    when "001" => calc2 <= n2;
+                    when "010" => calc2 <= n3;
+                    when "011" => calc2 <= n4;
+                    when "100" => calc2 <= n5;
+                    when others => null;
+                end case;
+                total <= calc1 + calc2;
+                case res is
+                    when "000" => n1 <= total;
+                    when "001" => n2 <= total;
+                    when "010" => n3 <= total;
+                    when "011" => n4 <= total;
+                    when "100" => n5 <= total;
+                    when others => null;
+                end case;
+            elsif (resta = '1') then
+                case op1 is
+                    when "000" => calc1 <= n1;
+                    when "001" => calc1 <= n2;
+                    when "010" => calc1 <= n3;
+                    when "011" => calc1 <= n4;
+                    when "100" => calc1 <= n5;
+                    when others => null;
+                end case;
+                case op2 is
+                    when "000" => calc2 <= n1;
+                    when "001" => calc2 <= n2;
+                    when "010" => calc2 <= n3;
+                    when "011" => calc2 <= n4;
+                    when "100" => calc2 <= n5;
+                    when others => null;
+                end case;
+                total <= calc1 - calc2;
+                case res is
+                    when "000" => n1 <= total;
+                    when "001" => n2 <= total;
+                    when "010" => n3 <= total;
+                    when "011" => n4 <= total;
+                    when "100" => n5 <= total;
+                    when others => null;
                 end case;
             end if;
         end process;
