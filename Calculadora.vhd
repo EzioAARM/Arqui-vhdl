@@ -43,11 +43,11 @@ Port (
 end Calculadora;
 
 architecture Behavioral of Calculadora is
-signal n1 : std_logic_vector(4 downto 0);
-signal n2 : std_logic_vector(4 downto 0);
-signal n3 : std_logic_vector(4 downto 0);
-signal n4 : std_logic_vector(4 downto 0);
-signal n5 : std_logic_vector(4 downto 0);
+signal n1 : std_logic_vector(4 downto 0) := "00000";
+signal n2 : std_logic_vector(4 downto 0) := "00000";
+signal n3 : std_logic_vector(4 downto 0) := "00000";
+signal n4 : std_logic_vector(4 downto 0) := "00000";
+signal n5 : std_logic_vector(4 downto 0) := "00000";
 signal numeroMostrar : std_logic_vector(4 downto 0);
 begin
 
@@ -67,10 +67,10 @@ begin
             elsif (mostrar = '1') then
                 case posicion is
                     when "000" => numeroMostrar <= n1;
-                    when "001" => numeroMostrar <= n1;
-                    when "010" => numeroMostrar <= n1;
-                    when "011" => numeroMostrar <= n1;
-                    when "100" => numeroMostrar <= n1;
+                    when "001" => numeroMostrar <= n2;
+                    when "010" => numeroMostrar <= n3;
+                    when "011" => numeroMostrar <= n4;
+                    when "100" => numeroMostrar <= n5;
                     when others => null;
                 end case;
                 case numeroMostrar is

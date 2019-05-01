@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Wed May  1 10:14:01 2019
+| Date             : Wed May  1 10:28:12 2019
 | Host             : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file Calculadora_power_routed.rpt -pb Calculadora_power_summary_routed.pb -rpx Calculadora_power_routed.rpx
 | Design           : Calculadora
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.724        |
+| Total On-Chip Power (W)  | 7.424        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.636        |
-| Device Static (W)        | 0.088        |
+| Dynamic (W)              | 7.316        |
+| Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 61.4         |
-| Junction Temperature (C) | 48.6         |
+| Max Ambient (C)          | 47.9         |
+| Junction Temperature (C) | 62.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.028 |       31 |       --- |             --- |
-|   LUT as Logic |     0.028 |        6 |     20800 |            0.03 |
+| Slice Logic    |     0.088 |       65 |       --- |             --- |
+|   LUT as Logic |     0.088 |       16 |     20800 |            0.08 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-|   Register     |     0.000 |       17 |     41600 |            0.04 |
-| Signals        |     0.128 |       37 |       --- |             --- |
-| I/O            |     4.480 |       21 |       106 |           19.81 |
-| Static Power   |     0.088 |          |           |                 |
-| Total          |     4.724 |          |           |                 |
+|   Register     |     0.000 |       37 |     41600 |            0.09 |
+| Signals        |     0.225 |       70 |       --- |             --- |
+| I/O            |     7.002 |       21 |       106 |           19.81 |
+| Static Power   |     0.108 |          |           |                 |
+| Total          |     7.424 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,16 +69,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.219 |       0.196 |      0.023 |
-| Vccaux    |       1.800 |     0.177 |       0.163 |      0.014 |
-| Vcco33    |       3.300 |     1.258 |       1.257 |      0.001 |
+| Vccint    |       1.000 |     0.393 |       0.353 |      0.040 |
+| Vccaux    |       1.800 |     0.271 |       0.255 |      0.016 |
+| Vcco33    |       3.300 |     1.972 |       1.971 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -136,7 +136,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| Calculadora |     4.636 |
+| Calculadora |     7.316 |
 +-------------+-----------+
 
 

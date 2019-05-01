@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed May  1 10:13:23 2019
+| Date         : Wed May  1 10:27:31 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_control_sets -verbose -file Calculadora_control_sets_placed.rpt
 | Design       : Calculadora
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     3 |
-| Unused register locations in slices containing registers |     7 |
+| Number of unique control sets                            |     7 |
+| Unused register locations in slices containing registers |    19 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      5 |            2 |
+|      5 |            6 |
 |      7 |            1 |
 +--------+--------------+
 
@@ -45,7 +45,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |            7 |
+| No           | No                    | No                     |              37 |           15 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -60,8 +60,12 @@ Table of Contents
 +-------------------------------+---------------+------------------+------------------+----------------+
 |          Clock Signal         | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +-------------------------------+---------------+------------------+------------------+----------------+
+|  numeroMostrar_reg[4]_i_2_n_0 |               |                  |                2 |              5 |
+|  n5_reg[4]_i_1_n_0            |               |                  |                2 |              5 |
+|  n3_reg[4]_i_1_n_0            |               |                  |                2 |              5 |
+|  n4_reg[4]_i_1_n_0            |               |                  |                2 |              5 |
 |  n1_reg[4]_i_1_n_0            |               |                  |                2 |              5 |
-|  numeroMostrar_reg[4]_i_1_n_0 |               |                  |                2 |              5 |
+|  n2_reg[4]_i_1_n_0            |               |                  |                2 |              5 |
 |  leds_reg[6]_i_2_n_0          |               |                  |                3 |              7 |
 +-------------------------------+---------------+------------------+------------------+----------------+
 
