@@ -47,5 +47,3 @@ set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN T17 [get_ports suma]
 set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W19 [get_ports resta]
-set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W5 [get_ports reloj]

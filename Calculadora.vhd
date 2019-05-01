@@ -43,7 +43,6 @@ Port (
     set_pos: in std_logic;
     suma: in std_logic;
     resta: in std_logic;
-    reloj: in std_logic;
     
     leds: out std_logic_vector(6 downto 0);
     displays: out std_logic_vector(3 downto 0)
@@ -57,9 +56,6 @@ architecture Behavioral of Calculadora is
     signal n4 : std_logic_vector(4 downto 0) := "00000";
     signal n5 : std_logic_vector(4 downto 0) := "00000";
     signal numeroMostrar : std_logic_vector(4 downto 0);
-    signal numMostrarInt : integer;
-    signal d1, d2: integer;
-    signal shd1, shd2: std_logic_vector(6 downto 0);
     
     signal op1 : std_logic_vector(2 downto 0) := "000";
     signal op2 : std_logic_vector(2 downto 0) := "000";
@@ -93,19 +89,18 @@ displays <= "1110";
                     when others => null;
                 end case;
                 case conv_integer(numeroMostrar) is
-                    when 0 => shd1 <= "0000001";
-                    when 1 => shd1 <= "1001111";
-                    when 2 => shd1 <= "0010010";
-                    when 3 => shd1 <= "0000110";
-                    when 4 => shd1 <= "1001100";
-                    when 5 => shd1 <= "0100100";
-                    when 6 => shd1 <= "0100000";
-                    when 7 => shd1 <= "0001111";
-                    when 8 => shd1 <= "0000000";
-                    when 9 => shd1 <= "0000100";
-                    when others => shd1 <= "0000000";
+                    when 0 => leds <= "0000001";
+                    when 1 => leds <= "1001111";
+                    when 2 => leds <= "0010010";
+                    when 3 => leds <= "0000110";
+                    when 4 => leds <= "1001100";
+                    when 5 => leds <= "0100100";
+                    when 6 => leds <= "0100000";
+                    when 7 => leds <= "0001111";
+                    when 8 => leds <= "0000000";
+                    when 9 => leds <= "0000100";
+                    when others => leds <= "0000000";
                 end case;
-                leds <= shd1;
             elsif (set_pos = '1') then
                 if (presiono = 0) then
                     op1 <= posicion;

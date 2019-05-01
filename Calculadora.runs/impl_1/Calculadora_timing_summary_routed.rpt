@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed May  1 12:46:22 2019
+| Date         : Wed May  1 12:54:43 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -max_paths 10 -file Calculadora_timing_summary_routed.rpt -pb Calculadora_timing_summary_routed.pb -rpx Calculadora_timing_summary_routed.rpx -warn_on_violation
 | Design       : Calculadora
@@ -52,9 +52,9 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 100 register/latch pins with no clock driven by root clock pin: guardar (HIGH)
+ There are 93 register/latch pins with no clock driven by root clock pin: guardar (HIGH)
 
- There are 100 register/latch pins with no clock driven by root clock pin: mostrar (HIGH)
+ There are 93 register/latch pins with no clock driven by root clock pin: mostrar (HIGH)
 
  There are 30 register/latch pins with no clock driven by root clock pin: posicion[0] (HIGH)
 
@@ -163,7 +163,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 100 pins that are not constrained for maximum delay. (HIGH)
+ There are 93 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
