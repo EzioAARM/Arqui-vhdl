@@ -1,6 +1,8 @@
 set_property SRC_FILE_INFO {cfile:/home/axel/Documentos/CountersTest/cst_CountersTest.xdc rfile:../../../cst_CountersTest.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -add -name sys_clk_pin -period 100000000.00 -waveform {0 100000000} [get_ports clk]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U2 [get_ports {display[0]}]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
