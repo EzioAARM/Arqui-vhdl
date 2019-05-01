@@ -49,11 +49,6 @@ Port (
 end Calculadora;
 
 architecture Behavioral of Calculadora is
-    constant max_refresh_count: INTEGER := 100000; 
-    signal refresh_count: INTEGER range 0 to max_refresh_count;
-    signal refresh_state: STD_LOGIC_VECTOR(1 downto 0) := (others => '0');
-    signal display_sel: STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
-    
     signal n1 : std_logic_vector(4 downto 0) := "00000";
     signal n2 : std_logic_vector(4 downto 0) := "00000";
     signal n3 : std_logic_vector(4 downto 0) := "00000";
@@ -73,72 +68,60 @@ architecture Behavioral of Calculadora is
     signal presiono : integer := 0;
 begin
 
-    displays <= display_sel;
-    
-    gen_clock: process(reloj) is
-        begin
-            if (rising_edge(reloj) and reloj = '1') then
-                if (refresh_count < max_refresh_count) then
-                    refresh_count <= refresh_count + 1;
-                else
-                    refresh_state <= refresh_state + 1;
-                    refresh_count <= 0;
-                end if;
-            end if;
-        end process;
-        
-    show_display: process(refresh_state) is
-        begin
-            case refresh_state is
-                when "00" => display_sel <= "1110";
-                when "01" => display_sel <= "1101";
-                when "10" => display_sel <= "1011";
-                when "11" => display_sel <= "0111";
-                when others => display_sel <= "1111";
-            end case;
-            numMostrarInt <= conv_integer(numeroMostrar);
-            d2 <= numMostrarInt / 10;
-            d2 <= d2 * 10;
-            d1 <= numMostrarInt - d2;
-            case d1 is
-                when 0 => shd1 <= "0000001";
-                when 1 => shd1 <= "1001111";
-                when 2 => shd1 <= "0010010";
-                when 3 => shd1 <= "0000110";
-                when 4 => shd1 <= "1001100";
-                when 5 => shd1 <= "0100100";
-                when 6 => shd1 <= "0100000";
-                when 7 => shd1 <= "0001111";
-                when 8 => shd1 <= "0000000";
-                when 9 => shd1 <= "0000100";
-                when others => shd1 <= "1111111";
-            end case;
-            case d2 is
-                when 0 => shd2 <= "0000001";
-                when 1 => shd2 <= "1001111";
-                when 2 => shd2 <= "0010010";
-                when 3 => shd2 <= "0000110";
-                when 4 => shd2 <= "1001100";
-                when 5 => shd2 <= "0100100";
-                when 6 => shd2 <= "0100000";
-                when 7 => shd2 <= "0001111";
-                when 8 => shd2 <= "0000000";
-                when 9 => shd2 <= "0000100";
-                when others => shd2 <= "1111111";
-            end case;
-            case display_sel is
-                when "1110" => 
-                    leds <= shd1; -- 0 
-                when "1101" => 
-                    leds <= shd1; -- 1 
-                when "1011" => 
-                    leds <= "0000001"; -- 2 
-                when "0111" => 
-                    leds <= "0000001"; -- 3 
-                when others =>
-                    leds <= "0000001"; 
-            end case;
-        end process;
+displays <= "1100";
+
+--    show_display: process(refresh_state) is
+--        begin
+--            case refresh_state is
+--                when "00" => display_sel <= "1110";
+--                when "01" => display_sel <= "1101";
+--                when "10" => display_sel <= "1011";
+--                when "11" => display_sel <= "0111";
+--                when others => display_sel <= "1111";
+--            end case;
+--            numMostrarInt <= conv_integer(numeroMostrar);
+--            d2 <= numMostrarInt / 10;
+--            d2 <= d2 * 10;
+--            d1 <= numMostrarInt - d2;
+--            case d1 is
+--                when 0 => shd1 <= "0000001";
+--                when 1 => shd1 <= "1001111";
+--                when 2 => shd1 <= "0010010";
+--                when 3 => shd1 <= "0000110";
+--                when 4 => shd1 <= "1001100";
+--                when 5 => shd1 <= "0100100";
+--                when 6 => shd1 <= "0100000";
+--                when 7 => shd1 <= "0001111";
+--                when 8 => shd1 <= "0000000";
+--                when 9 => shd1 <= "0000100";
+--                when others => shd1 <= "0000000";
+--            end case;
+--            case d2 is
+--                when 0 => shd2 <= "0000001";
+--                when 1 => shd2 <= "1001111";
+--                when 2 => shd2 <= "0010010";
+--                when 3 => shd2 <= "0000110";
+--                when 4 => shd2 <= "1001100";
+--                when 5 => shd2 <= "0100100";
+--                when 6 => shd2 <= "0100000";
+--                when 7 => shd2 <= "0001111";
+--                when 8 => shd2 <= "0000000";
+--                when 9 => shd2 <= "0000100";
+--                when others => shd2 <= "0000000";
+--            end case;
+--            case display_sel is
+--                when "1110" => 
+--                    leds <= shd1; -- 0 
+--                when "1101" => 
+--                    leds <= shd1; -- 1 
+--                when "1011" => 
+--                    leds <= "0000001"; -- 2 
+--                when "0111" => 
+--                    leds <= "0000001"; -- 3 
+--                when others =>
+--                    leds <= "0000001"; 
+--            end case;
+--        end process;
     
     process (guardar, mostrar, set_pos, suma, resta) is
         begin
@@ -159,6 +142,32 @@ begin
                     when "011" => numeroMostrar <= n4;
                     when "100" => numeroMostrar <= n5;
                     when others => null;
+                end case;
+                case d1 is
+                    when 0 => shd1 <= "0000001";
+                    when 1 => shd1 <= "1001111";
+                    when 2 => shd1 <= "0010010";
+                    when 3 => shd1 <= "0000110";
+                    when 4 => shd1 <= "1001100";
+                    when 5 => shd1 <= "0100100";
+                    when 6 => shd1 <= "0100000";
+                    when 7 => shd1 <= "0001111";
+                    when 8 => shd1 <= "0000000";
+                    when 9 => shd1 <= "0000100";
+                    when others => shd1 <= "0000000";
+                end case;
+                case d2 is
+                    when 0 => shd2 <= "0000001";
+                    when 1 => shd2 <= "1001111";
+                    when 2 => shd2 <= "0010010";
+                    when 3 => shd2 <= "0000110";
+                    when 4 => shd2 <= "1001100";
+                    when 5 => shd2 <= "0100100";
+                    when 6 => shd2 <= "0100000";
+                    when 7 => shd2 <= "0001111";
+                    when 8 => shd2 <= "0000000";
+                    when 9 => shd2 <= "0000100";
+                    when others => shd2 <= "0000000";
                 end case;
                 
             elsif (set_pos = '1') then
