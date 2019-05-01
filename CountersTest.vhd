@@ -35,7 +35,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity CountersTest is
     Port (
         clk : in std_logic;
-        display : out std_logic;
+        display : out std_logic_vector(3 downto 0);
         cot_out : out std_logic_vector(6 downto 0)
     );
 end CountersTest;
@@ -45,7 +45,7 @@ architecture Behavioral of CountersTest is
 signal num : integer;
 
 begin
-display <= '0';
+display <= "1110";
 process (clk) is
     begin
         if rising_edge(clk) then
