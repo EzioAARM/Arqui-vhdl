@@ -50,7 +50,7 @@ display <= "1110";
 --clk <= not clk after 500 ms;
 process (clk) is
     begin
-        if (clk = '1') then
+        if (rising_edge(clk)) then
             if (num = 9) then
                 num <= 0;
             else 
