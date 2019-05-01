@@ -169,7 +169,10 @@ displays <= "1100";
                     when 9 => shd2 <= "0000100";
                     when others => shd2 <= "0000000";
                 end case;
-                
+                displays <= "1110";
+                leds <= shd1;
+                displays <= "1101";
+                leds <= shd2;
             elsif (set_pos = '1') then
                 if (presiono = 0) then
                     op1 <= posicion;
