@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu May  2 02:03:05 2019
+| Date             : Thu May  2 02:19:21 2019
 | Host             : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file corto_power_routed.rpt -pb corto_power_summary_routed.pb -rpx corto_power_routed.rpx
 | Design           : corto
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.559        |
+| Total On-Chip Power (W)  | 0.581        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.486        |
+| Dynamic (W)              | 0.508        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 82.2         |
-| Junction Temperature (C) | 27.8         |
+| Max Ambient (C)          | 82.1         |
+| Junction Temperature (C) | 27.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -58,10 +58,10 @@ Table of Contents
 |   Register     |     0.018 |       55 |     41600 |            0.13 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.144 |       98 |       --- |             --- |
-| I/O            |     0.071 |       13 |       106 |           12.26 |
+| Signals        |     0.147 |       98 |       --- |             --- |
+| I/O            |     0.091 |       13 |       106 |           12.26 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.559 |          |           |                 |
+| Total          |     0.581 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.429 |       0.419 |      0.010 |
-| Vccaux    |       1.800 |     0.015 |       0.002 |      0.013 |
-| Vcco33    |       3.300 |     0.020 |       0.019 |      0.001 |
+| Vccint    |       1.000 |     0.432 |       0.421 |      0.011 |
+| Vccaux    |       1.800 |     0.016 |       0.003 |      0.013 |
+| Vcco33    |       3.300 |     0.026 |       0.025 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,7 +138,7 @@ Table of Contents
 +-------+-----------+
 | Name  | Power (W) |
 +-------+-----------+
-| corto |     0.486 |
+| corto |     0.508 |
 +-------+-----------+
 
 
