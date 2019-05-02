@@ -42,14 +42,14 @@ end CountersTest;
 
 architecture Behavioral of CountersTest is
 
-signal num : integer;
+signal num : integer := 0;
 
 begin
     display <= "1110";
     process (btn) is
         begin
             if (btn = '1') then
-                if (num = 9) then
+                if (num >= 9) then
                     num <= 0;
                 else 
                     num <= num + 1;
@@ -65,7 +65,7 @@ begin
                     when 7 =>  cot_out <= "0001111"; -- 7
                     when 8 =>  cot_out <= "0000000"; -- 8
                     when 9 =>  cot_out <= "0000100"; -- 9
-                    when others => cot_out <= "0000001";
+                    when others => cot_out <= "1111111";
                 end case;
             end if;
         end process;

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556749678">
-  <File Type="PA-TCL" Name="CountersTest.tcl"/>
-  <File Type="REPORTS-TCL" Name="CountersTest_reports.tcl"/>
-  <File Type="RDS-RDS" Name="CountersTest.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556778650">
+  <File Type="VDS-TIMING-PB" Name="CountersTest_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CountersTest_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="CountersTest.dcp"/>
   <File Type="RDS-UTIL-PB" Name="CountersTest_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="CountersTest_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="CountersTest_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="CountersTest.vds"/>
+  <File Type="REPORTS-TCL" Name="CountersTest_reports.tcl"/>
+  <File Type="PA-TCL" Name="CountersTest.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/CountersTest.vhd">
