@@ -42,6 +42,7 @@ Port (
 end corto;
 
 architecture Behavioral of corto is
+
 signal contador: STD_LOGIC_VECTOR (27 downto 0);
 signal activo: std_logic;
 signal numero: STD_LOGIC_VECTOR (15 downto 0);
@@ -63,12 +64,6 @@ begin
     when "0111" => led <= "0001111"; -- 7 
     when "1000" => led <= "0000000"; -- 8     
     when "1001" => led <= "0000100"; -- 9 
-    when "1010" => led <= "0001000"; -- A
-    when "1011" => led <= "1100000"; -- B
-    when "1100" => led <= "0110001"; -- C
-    when "1101" => led <= "1000010"; -- D
-    when "1110" => led <= "0110000"; -- E
-    when "1111" => led <= "0111000"; -- F
     when others => led <= "0000100";
     end case;
 end process;
@@ -84,19 +79,19 @@ end process;
 process(act)
 begin
     case act is
-        when "00" =>
-            Display <= "1110"; 
-            SDDisplay <= numero(15 downto 12);
-        when "01" =>
-            Display <= "1101"; 
-            SDDisplay <= numero(11 downto 8);
-        when "10" =>
-            Display <= "1011"; 
-            SDDisplay <= numero(7 downto 4);
-        when "11" =>
-            Display <= "0111"; 
-            SDDisplay <= numero(3 downto 0);
-        when others => Display <= "0000";
+    when "00" =>
+        Display <= "0111"; 
+        SDDisplay <= numero(15 downto 12);
+    when "01" =>
+        Display <= "1011"; 
+        SDDisplay <= numero(11 downto 8);
+    when "10" =>
+        Display <= "1101"; 
+        SDDisplay <= numero(7 downto 4);
+    when "11" =>
+        Display <= "1110"; 
+        SDDisplay <= numero(3 downto 0);
+
     end case;
 end process;
 
@@ -105,7 +100,7 @@ begin
         if(reset='1') then
             contador <= (others => '0');
         elsif(rising_edge(timer)) then
-            if(contador>=x"FFFFFF") then
+            if(contador>=x"5F5E0FF") then
                 contador <= (others => '0');
             else
                 case (SDDisplay) is

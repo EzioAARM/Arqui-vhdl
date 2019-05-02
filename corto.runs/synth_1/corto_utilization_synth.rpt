@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu May  2 01:47:42 2019
+| Date         : Thu May  2 01:56:45 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file corto_utilization_synth.rpt -pb corto_utilization_synth.pb
 | Design       : corto
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   10 |     0 |     20800 |  0.05 |
-|   LUT as Logic          |   10 |     0 |     20800 |  0.05 |
+| Slice LUTs*             |   59 |     0 |     20800 |  0.28 |
+|   LUT as Logic          |   59 |     0 |     20800 |  0.28 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   11 |     0 |     41600 |  0.03 |
-|   Register as Flip Flop |   11 |     0 |     41600 |  0.03 |
+| Slice Registers         |   55 |     0 |     41600 |  0.13 |
+|   Register as Flip Flop |   55 |     0 |     41600 |  0.13 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 11    |          Yes |           - |        Reset |
+| 55    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -149,15 +149,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| FDCE     |   55 |        Flop & Latch |
+| LUT6     |   38 |                 LUT |
+| LUT4     |   14 |                 LUT |
 | OBUF     |   11 |                  IO |
-| FDCE     |   11 |        Flop & Latch |
-| LUT2     |    6 |                 LUT |
-| LUT6     |    3 |                 LUT |
-| LUT5     |    2 |                 LUT |
-| LUT4     |    2 |                 LUT |
-| LUT3     |    2 |                 LUT |
+| CARRY4   |   11 |          CarryLogic |
+| LUT2     |    7 |                 LUT |
+| LUT5     |    5 |                 LUT |
+| LUT3     |    4 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
-| LUT1     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

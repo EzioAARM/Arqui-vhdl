@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556783207">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556783751">
   <File Type="VDS-TIMING-PB" Name="corto_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="corto_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="corto.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="corto_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="corto_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="corto_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="corto.vds"/>
   <File Type="REPORTS-TCL" Name="corto_reports.tcl"/>
   <File Type="PA-TCL" Name="corto.tcl"/>
-  <File Type="RDS-RDS" Name="corto.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="corto_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="corto_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="corto_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/corto.vhd">

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu May  2 01:48:34 2019
+| Date         : Thu May  2 01:57:34 2019
 | Host         : axel-VirtualBox running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_control_sets -verbose -file corto_control_sets_placed.rpt
 | Design       : corto
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     1 |
-| Unused register locations in slices containing registers |     5 |
+| Number of unique control sets                            |     2 |
+| Unused register locations in slices containing registers |     1 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|     11 |            1 |
+|    16+ |            2 |
 +--------+--------------+
 
 
@@ -45,10 +45,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              11 |            4 |
+| No           | No                    | Yes                    |              39 |           10 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | No                    | Yes                    |              16 |            4 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -59,7 +59,8 @@ Table of Contents
 +------------------+---------------+------------------+------------------+----------------+
 |   Clock Signal   | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +------------------+---------------+------------------+------------------+----------------+
-|  timer_IBUF_BUFG |               | reset_IBUF       |                4 |             11 |
+|  timer_IBUF_BUFG | sel           | reset_IBUF       |                4 |             16 |
+|  timer_IBUF_BUFG |               | reset_IBUF       |               10 |             39 |
 +------------------+---------------+------------------+------------------+----------------+
 
 
